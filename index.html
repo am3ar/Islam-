@@ -6,68 +6,57 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" defer></script>
     <style>
-        .discord-btn:hover {
-            background-color: #7289da;
-            transform: scale(1.1);
-            transition: all 0.3s ease-in-out;
+        :root {
+            --primary-color: #6fbf91; /* الأخضر الفاتح */
+            --text-color: #ffffff; /* الأبيض */
+            --dark-bg: #0f2c21; /* الأخضر الغامق */
+        }
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-color);
         }
         .dark-mode {
-            background: linear-gradient(135deg, #0f2c21, #1a3b2f, #245143);
-            color: #ffffff;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
         }
-        .dark-mode .section-bg {
-            background: linear-gradient(135deg, #184734, #23604a, #2e7a60);
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--text-color);
         }
-        .dark-mode .text-primary {
-            color: #a3f7bf;
-        }
-        .dark-mode .btn-primary {
-            background-color: #2e7a60;
-            color: white;
-        }
-        .dark-mode .btn-primary:hover {
-            background-color: #23604a;
+        .btn-primary:hover {
+            background-color: #5c8e7b;
         }
     </style>
 </head>
-<body class="bg-gradient-to-r from-green-700 via-green-600 to-green-500 text-white transition-colors duration-300" id="body">
+<body id="body" class="transition-colors duration-300">
     <!-- Dark Mode Toggle -->
     <div class="fixed top-5 right-5 z-10">
-        <button id="toggleDarkMode" class="bg-green-600 text-white rounded-full p-4 shadow-2xl hover:bg-green-700 hover:scale-105 transition duration-300 ease-in-out">
+        <button id="toggleDarkMode" class="bg-white text-black rounded-full p-4 shadow-2xl hover:bg-gray-300 transition duration-300 ease-in-out">
             <i id="themeIcon" class="fas fa-moon text-2xl"></i>
         </button>
     </div><!-- Hero Section -->
-<section class="text-center py-20 px-6 animate-fadeIn">
-    <h1 class="text-5xl font-bold mb-4 text-white drop-shadow-lg">السِّلَامُ عَلَيْكُمْ</h1>
-    <p class="text-lg text-gray-200 mb-6">مرحبًا بكم في <span class="text-green-300">قلعة السنة</span></p>
-    <img src="/images/logo.png" alt="" class="w-32 h-32 mx-auto rounded-full mb-6 border-4 border-green-300 shadow-xl">
-    <p class="text-md italic text-gray-200 max-w-3xl mx-auto mb-8"> ﴾حَيَّاكُمِ اللهُ﴿ </p>
-    <!-- Discord Button -->
-    <div class="flex justify-center items-center">
-        <a href="https://discord.gg/3XjsUfruQZ" class="text-3xl p-4 border-4 border-green-300 rounded-full discord-btn flex items-center justify-center w-20 h-20 shadow-lg">
-            <i class="fab fa-discord text-white"></i>
-        </a>
-    </div>
+<section class="text-center py-20 px-6">
+    <h1 class="text-5xl font-bold mb-4">السِّلَامُ عَلَيْكُمْ</h1>
+    <p class="text-lg mb-6">مرحبًا بكم في <span>قلعة السنة</span></p>
+    <img src="/images/logo.png" alt="" class="w-32 h-32 mx-auto rounded-full mb-6 border-4 border-white shadow-xl">
+    <p class="text-md italic max-w-3xl mx-auto mb-8"> ﴾حَيَّاكُمِ اللهُ﴿ </p>
 </section>
 
 <!-- About Section -->
-<section class="section-bg text-center py-16 dark-mode transition-colors duration-300">
-    <h2 class="text-4xl font-semibold text-green-700 mb-6 dark:text-primary">عن الموقع</h2>
-    <div class="max-w-md mx-auto">
-        <p class="text-lg text-gray-700 dark:text-gray-300">قلعة السنة هو موقع ديني يقدم معلومات موثوقة من القرآن والسنة النبوية الشريفة، يهدف إلى نشر العلم الشرعي وتيسير الوصول إليه بشكل بسيط وسهل.</p>
-    </div>
-    <a href="#contact" class="text-lg font-semibold text-green-500 hover:text-green-700 dark:text-primary transition">اتصل بنا</a>
+<section class="text-center py-16">
+    <h2 class="text-4xl font-semibold mb-6">عن الموقع</h2>
+    <p class="text-lg max-w-4xl mx-auto mb-6">قلعة السنة هو موقع ديني يقدم معلومات موثوقة من القرآن والسنة النبوية الشريفة، يهدف إلى نشر العلم الشرعي وتيسير الوصول إليه بشكل بسيط وسهل.</p>
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="section-bg text-white text-center py-16 dark-mode transition-colors duration-300">
-    <h2 class="text-4xl font-semibold mb-6 dark:text-primary">اتصل بنا</h2>
+<section id="contact" class="text-center py-16">
+    <h2 class="text-4xl font-semibold mb-6">اتصل بنا</h2>
     <p class="text-lg max-w-3xl mx-auto">إذا كانت لديك أي استفسارات أو رغبة في التواصل معنا للحصول على مزيد من المعلومات، لا تتردد في الاتصال بنا عبر الرابط أدناه.</p>
-    <a href="mailto:info@sunna-castle.com" class="mt-6 inline-block text-lg btn-primary px-8 py-3 rounded-full text-white hover:bg-green-600 transition">إرسال رسالة</a>
+    <a href="mailto:info@sunna-castle.com" class="mt-6 inline-block text-lg btn-primary px-8 py-3 rounded-full hover:opacity-80 transition">إرسال رسالة</a>
 </section>
 
 <!-- Footer -->
-<footer class="section-bg text-white text-center py-6 dark-mode transition-colors duration-300">
+<footer class="text-center py-6">
     <p>&copy; 2025 قلعة السنة. جميع الحقوق محفوظة.</p>
 </footer>
 
