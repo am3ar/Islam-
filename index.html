@@ -4,84 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>قلعة السنة</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- إضافة مكتبة AOS لتحريك العناصر عند التمرير -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- إضافة مكتبة Hover.css -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" rel="stylesheet">
-    
-    <!-- تحسين الأداء: تحميل الصور بشكل كسول -->
-    <script>
-        // تمكين التحميل الكسول للصور
-        document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('img[data-src]');
-            images.forEach(image => {
-                image.setAttribute('src', image.getAttribute('data-src'));
-            });
-        });
-    </script>
 </head>
-<body class="bg-gradient-to-br from-green-900 to-green-800 text-white p-6" style="font-family: 'Cairo', sans-serif;">
+<body class="bg-gradient-to-br from-green-900 to-green-800 text-white p-6">
     <div class="flex justify-center items-center min-h-screen">
-        <div class="bg-green-800 p-8 rounded-3xl shadow-2xl w-full max-w-lg text-center border-4 border-gold-500 transform hover:scale-105 transition duration-300 ease-in-out"
-            data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            <img src="/images/logo.png" alt="قلعة السنة" data-src="/images/logo.png" class="w-28 h-28 mx-auto mb-6 rounded-full border-4 border-gold-500 shadow-lg" data-aos="flip-left" data-aos-duration="1000"/>
-            <h1 class="text-4xl font-extrabold mb-4 text-green-400 drop-shadow-lg animate-pulse" data-aos="fade-right" data-aos-duration="1500">السلام عليكم</h1>
-            <p class="text-xl mb-6 font-medium text-gray-300" data-aos="zoom-in" data-aos-duration="1500">مرحبًا بكم في <span class='text-green-400'>قلعة السنة</span></p>
-            <img data-src="/images/banner.jpg" alt="قلعة السنة" class="w-full h-56 object-cover rounded-xl mb-6 border-4 border-gold-500 shadow-xl" data-aos="fade-up" data-aos-duration="2000"/>
-            <p class="text-lg italic text-gray-300 mb-8 border-t border-b border-gray-500 py-4" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400">"وَتَوَكَّلْ عَلَى اللَّهِ وَكَفَى بِاللَّهِ وَكِيلًا" (النساء: 81)</p>
-            
-            <div class="mb-8">
-                <a href="#subscribe" class="bg-green-500 text-black py-3 px-6 rounded-full text-xl font-bold hover:bg-green-600 transform transition duration-300 ease-in-out hover:scale-105 border-4 border-gold-500 hover:border-2" data-aos="fade-up" data-aos-duration="1500">
-                    اشترك الآن
+        <div class="bg-green-800 p-12 rounded-3xl shadow-2xl w-full max-w-md text-center border-4 border-green-500 transform hover:scale-105 transition duration-300 ease-in-out"
+            data-aos="fade-up" data-aos-duration="1500">
+            <img src="/images/logo.png" alt="قلعة السنة" class="w-24 h-24 mx-auto mb-6 rounded-full border-4 border-gold-500 shadow-lg" />
+            <h1 class="text-5xl font-extrabold mb-6 text-green-400 drop-shadow-lg animate-pulse" data-aos="fade-right">السلام عليكم</h1>
+            <p class="text-lg mb-6 font-medium text-gray-300" data-aos="fade-left">مرحبًا بكم في <span class='text-green-400'>قلعة السنة</span></p>
+            <img src="/images/banner.jpg" alt="قلعة السنة" class="w-full h-48 object-cover rounded-xl mb-6 border-4 border-gold-500 shadow-xl" />
+            <p class="text-md italic text-gray-300 mb-8 border-t border-b border-gray-500 py-3" data-aos="fade-up">"وَتَوَكَّلْ عَلَى اللَّهِ وَكَفَى بِاللَّهِ وَكِيلًا" (النساء: 81)</p>
+            <div class="flex justify-center space-x-6">
+                <!-- فقط أيقونة Discord مع تأثير hover -->
+                <a href="https://discord.gg/3XjsUfruQZ" class="text-3xl p-4 border-4 border-gold-500 rounded-full hover:bg-green-500 hover:text-black transition flex items-center justify-center w-20 h-20 shadow-lg hover:shadow-green-500 hvr-grow">
+                    <i class="fab fa-discord"></i>
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- إضافة أيقونة Discord أسفل الزر -->
-    <div class="fixed bottom-8 right-8 flex justify-center items-center space-x-4">
-        <a href="https://discord.gg/3XjsUfruQZ" target="_blank" class="bg-green-500 text-black p-4 rounded-full shadow-xl transform transition duration-300 ease-in-out hover:scale-110 hover:bg-green-600">
-            <i class="fab fa-discord text-3xl"></i>
-        </a>
-    </div>
-
-    <!-- زر الوضع الداكن الثابت في الجانب مع أيقونة القمر والشمس -->
-    <button id="toggleTheme" class="fixed bottom-8 right-8 bg-green-500 text-black p-4 rounded-full shadow-xl transform transition duration-300 ease-in-out hover:scale-110 hover:bg-green-600">
-        <i id="themeIcon" class="fas fa-moon text-2xl"></i> <!-- البداية تكون أيقونة القمر -->
-    </button>
-
-    <!-- إضافة AOS و تحسين الأداء -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js" defer></script>
+    <!-- إضافة سكربت AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-
-        // تغيير الوضع بين الداكن والفاتح
-        const toggleButton = document.getElementById('toggleTheme');
-        const themeIcon = document.getElementById('themeIcon');
-        let isDarkMode = true;
-
-        toggleButton.addEventListener('click', () => {
-            document.body.classList.toggle('bg-gradient-to-br');
-            document.body.classList.toggle('from-green-900');
-            document.body.classList.toggle('to-green-800');
-            document.body.classList.toggle('bg-white');
-            document.body.classList.toggle('text-black');
-            toggleButton.classList.toggle('bg-gray-800');
-            toggleButton.classList.toggle('text-white');
-
-            // التبديل بين أيقونة القمر والشمس
-            if (isDarkMode) {
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            } else {
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-            }
-
-            // تحديث حالة الوضع
-            isDarkMode = !isDarkMode;
-        });
     </script>
 </body>
 </html>
