@@ -4,65 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>قلعة السنة</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" defer></script>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-gradient-to-br from-green-500 to-green-700 text-white">
 
-    <!-- Navbar -->
-    <nav class="bg-green-700 text-white shadow-md">
-        <div class="max-w-screen-lg mx-auto flex justify-between items-center p-4">
-            <a href="#" class="text-2xl font-semibold">قلعة السنة</a>
-            <ul class="hidden md:flex space-x-6">
-                <li><a href="#" class="hover:text-green-300 transition">الرئيسية</a></li>
-                <li><a href="#" class="hover:text-green-300 transition">عن الموقع</a></li>
-                <li><a href="#" class="hover:text-green-300 transition">الفتاوى</a></li>
-                <li><a href="#" class="hover:text-green-300 transition">اتصل بنا</a></li>
-            </ul>
-            <button class="md:hidden text-2xl" id="mobile-menu-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
+    <!-- Hero Section -->
+    <section class="text-center py-20 px-6">
+        <h1 class="text-5xl font-bold mb-4 text-white drop-shadow-lg">السلام عليكم</h1>
+        <p class="text-lg text-gray-200 mb-6">مرحبًا بكم في <span class="text-green-300">قلعة السنة</span></p>
+        <img src="/images/logo.png" alt="قلعة السنة" class="w-32 h-32 mx-auto rounded-full mb-6 border-4 border-green-300 shadow-xl">
+        <p class="text-md italic text-gray-200 max-w-3xl mx-auto mb-8">"وَتَوَكَّلْ عَلَى اللَّهِ وَكَفَى بِاللَّهِ وَكِيلًا" (النساء: 81)</p>
+        <div>
+            <a href="https://discord.gg/3XjsUfruQZ" class="text-3xl p-4 border-4 border-green-300 rounded-full hover:bg-green-600 hover:text-white transition flex items-center justify-center w-20 h-20 shadow-lg">
+                <i class="fab fa-discord"></i>
+            </a>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden bg-green-700 text-white hidden">
-            <ul class="space-y-4 p-4">
-                <li><a href="#" class="block hover:text-green-300 transition">الرئيسية</a></li>
-                <li><a href="#" class="block hover:text-green-300 transition">عن الموقع</a></li>
-                <li><a href="#" class="block hover:text-green-300 transition">الفتاوى</a></li>
-                <li><a href="#" class="block hover:text-green-300 transition">اتصل بنا</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <header class="bg-green-800 text-white text-center py-16">
-        <h1 class="text-4xl font-bold mb-4">السلام عليكم</h1>
-        <p class="text-xl">مرحبًا بكم في <span class="text-green-300">قلعة السنة</span></p>
-    </header>
-
-    <section class="py-16 bg-gray-50 text-center">
-        <h2 class="text-3xl font-semibold mb-8">عن الموقع</h2>
-        <p class="text-lg text-gray-700 max-w-4xl mx-auto">
-            موقع قلعة السنة يقدم لكم معلومات دينية قيمة ومستخلصة من السنة النبوية الشريفة والقرآن الكريم.
-        </p>
     </section>
 
-    <section class="py-16 bg-white text-center">
-        <h2 class="text-3xl font-semibold mb-8">اتصل بنا</h2>
-        <p class="text-lg text-gray-700">إذا كانت لديك أي استفسارات أو تريد التفاعل معنا، لا تتردد في الاتصال بنا.</p>
+    <!-- About Section -->
+    <section class="bg-white text-center py-16">
+        <h2 class="text-4xl font-semibold text-green-700 mb-6">عن الموقع</h2>
+        <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-6">قلعة السنة هو موقع ديني يقدم معلومات موثوقة من القرآن والسنة النبوية الشريفة، يهدف إلى نشر العلم الشرعي وتيسير الوصول إليه بشكل بسيط وسهل.</p>
+        <a href="#contact" class="text-lg font-semibold text-green-500 hover:text-green-700">اتصل بنا</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-green-800 text-white text-center py-16">
+        <h2 class="text-4xl font-semibold mb-6">اتصل بنا</h2>
+        <p class="text-lg max-w-3xl mx-auto">إذا كانت لديك أي استفسارات أو رغبة في التواصل معنا للحصول على مزيد من المعلومات، لا تتردد في الاتصال بنا عبر الرابط أدناه.</p>
+        <a href="mailto:info@sunna-castle.com" class="mt-6 inline-block text-lg bg-green-500 px-8 py-3 rounded-full text-white hover:bg-green-600 transition">إرسال رسالة</a>
     </section>
 
     <!-- Footer -->
     <footer class="bg-green-700 text-white text-center py-6">
         <p>&copy; 2025 قلعة السنة. جميع الحقوق محفوظة.</p>
     </footer>
-
-    <!-- Mobile Menu Toggle Script -->
-    <script>
-        document.getElementById("mobile-menu-toggle").addEventListener("click", function() {
-            document.getElementById("mobile-menu").classList.toggle("hidden");
-        });
-    </script>
 
 </body>
 </html>
