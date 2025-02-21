@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="ar">
+<!DOCTYPE html>
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,13 +12,14 @@
             --text-color: #ffffff; /* الأبيض */
             --dark-bg: #0f2c21; /* الأخضر الغامق */
             --border-color: #3c8d70; /* لون متناسق للأطراف */
+            --light-bg: #f4f4f4; /* الخلفية الفاتحة */
         }
         body {
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, #2a7b5e, #3c8d70); /* الأخضر الدافئ المتدرج */
             color: var(--text-color);
         }
         .dark-mode {
-            background-color: var(--dark-bg);
+            background: linear-gradient(135deg, #0f2c21, #2a7b5e); /* خلفية داكنة متدرجة */
             color: var(--text-color);
         }
         .btn-primary {
@@ -31,6 +33,12 @@
             border: 2px solid var(--border-color);
             padding: 20px;
             border-radius: 10px;
+        }
+        .btn-dark {
+            background-color: #333; /* لون داكن للزر في الوضع الداكن */
+        }
+        .btn-light {
+            background-color: #f0f0f0; /* لون فاتح للزر في الوضع الفاتح */
         }
     </style>
 </head>
@@ -76,10 +84,14 @@
             body.classList.add("dark-mode");
             themeIcon.classList.remove("fa-moon");
             themeIcon.classList.add("fa-sun");
+            toggleDarkMode.classList.add("btn-dark");
+            toggleDarkMode.classList.remove("btn-light");
         } else {
             body.classList.remove("dark-mode");
             themeIcon.classList.remove("fa-sun");
             themeIcon.classList.add("fa-moon");
+            toggleDarkMode.classList.add("btn-light");
+            toggleDarkMode.classList.remove("btn-dark");
         }
     }
     
