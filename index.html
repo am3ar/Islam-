@@ -7,13 +7,36 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" defer></script>
     <style>
+        /* Default Light Mode Styles */
+        .light-mode {
+            background: #f9fafb; /* الخلفية الفاتحة */
+            color: #333; /* النصوص الداكنة */
+        }
+        
+        /* Dark Mode Styles */
         .dark-mode {
-            background: #1b3a26; /* اللون الأخضر الداكن */
-            color: #ffffff; /* النص باللون الأبيض في الوضع الداكن */
+            background: #1b3a26; /* الخلفية الداكنة */
+            color: #ffffff; /* النصوص البيضاء */
+        }
+
+        .dark-mode button {
+            background: #2d6a4f; /* الزر في الوضع الداكن */
+        }
+
+        .dark-mode a {
+            color: #a8dadc; /* الروابط في الوضع الداكن */
+        }
+
+        .dark-mode a:hover {
+            color: #ffb703; /* الروابط عند التمرير في الوضع الداكن */
+        }
+
+        .dark-mode .discord-icon {
+            border-color: #a8dadc; /* حدود أيقونة الديسكورد في الوضع الداكن */
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-green-500 to-green-700 text-white transition-colors duration-300" id="body">
+<body class="light-mode transition-all duration-300" id="body">
 
     <!-- Dark Mode Toggle -->
     <div class="fixed top-5 right-5 z-10">
@@ -31,7 +54,7 @@
         
         <!-- Discord Button in the Center -->
         <div class="flex justify-center items-center">
-            <a href="https://discord.gg/3XjsUfruQZ" class="text-3xl p-4 border-4 border-green-300 rounded-full hover:bg-green-600 hover:text-white transition flex items-center justify-center w-20 h-20 shadow-lg">
+            <a href="https://discord.gg/3XjsUfruQZ" class="discord-icon text-3xl p-4 border-4 border-green-300 rounded-full hover:bg-green-600 hover:text-white transition flex items-center justify-center w-20 h-20 shadow-lg">
                 <i class="fab fa-discord"></i>
             </a>
         </div>
@@ -62,6 +85,7 @@
 
         toggleDarkMode.addEventListener("click", () => {
             body.classList.toggle("dark-mode");
+            body.classList.toggle("light-mode");
         });
     </script>
 
