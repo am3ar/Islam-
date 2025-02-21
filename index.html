@@ -4,96 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>قلعة السنة</title>
-
-    <!-- روابط المكتبات الأساسية -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link rel="preconnect" href="https://kit.fontawesome.com">
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-    <link rel="dns-prefetch" href="https://kit.fontawesome.com">
-
-    <!-- مكتبة TailwindCSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-
-    <!-- مكتبة AOS لتأثيرات التمرير -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- مكتبة Hover.css -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" rel="stylesheet">
-
-    <!-- تحميل FontAwesome بشكل غير متزامن -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" async></script>
-
-    <!-- إضافة مكتبة تغيير الوضع الداكن -->
-    <script>
-        // التحقق من تخزين الوضع الداكن في المتصفح عند تحميل الصفحة
-        if (localStorage.getItem('theme') === 'dark') {
-            document.documentElement.classList.add('dark');
-        }
-    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" defer></script>
 </head>
-<body class="bg-gradient-to-r from-green-800 via-green-600 to-green-400 text-white dark:bg-gradient-to-r dark:from-gray-800 dark:via-gray-600 dark:to-gray-400 dark:text-gray-200 transition-colors duration-500">
+<body class="bg-gray-100 text-gray-900">
 
     <!-- Navbar -->
-    <nav class="bg-green-900 text-white shadow-lg p-4 dark:bg-gray-900">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-3xl font-extrabold">قلعة السنة</a>
-            
-            <!-- قائمة التنقل للأجهزة الكبيرة -->
-            <ul class="hidden md:flex space-x-8 text-lg">
-                <li><a href="#" class="hover:text-green-400 transition duration-300 dark:hover:text-green-300">الرئيسية</a></li>
-                <li><a href="#" class="hover:text-green-400 transition duration-300 dark:hover:text-green-300">عن الموقع</a></li>
-                <li><a href="#" class="hover:text-green-400 transition duration-300 dark:hover:text-green-300">الفتاوى</a></li>
-                <li><a href="#" class="hover:text-green-400 transition duration-300 dark:hover:text-green-300">اتصل بنا</a></li>
+    <nav class="bg-green-700 text-white shadow-md">
+        <div class="max-w-screen-lg mx-auto flex justify-between items-center p-4">
+            <a href="#" class="text-2xl font-semibold">قلعة السنة</a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#" class="hover:text-green-300 transition">الرئيسية</a></li>
+                <li><a href="#" class="hover:text-green-300 transition">عن الموقع</a></li>
+                <li><a href="#" class="hover:text-green-300 transition">الفتاوى</a></li>
+                <li><a href="#" class="hover:text-green-300 transition">اتصل بنا</a></li>
             </ul>
-
-            <!-- زر قائمة التنقل للأجهزة الصغيرة -->
-            <button id="mobile-menu-button" class="md:hidden text-white p-2">
+            <button class="md:hidden text-2xl" id="mobile-menu-toggle">
                 <i class="fas fa-bars"></i>
             </button>
-
-            <!-- زر الوضع الداكن -->
-            <button id="theme-toggle" class="text-white bg-green-600 hover:bg-green-500 p-2 rounded-full">
-                <i class="fas fa-moon"></i>
-            </button>
         </div>
-
-        <!-- قائمة منسدلة للأجهزة الصغيرة -->
-        <div id="mobile-menu" class="md:hidden bg-green-900 text-white w-full hidden">
-            <ul class="space-y-4 p-4 text-lg">
-                <li><a href="#" class="hover:text-green-400 transition duration-300 dark:hover:text-green-300">الرئيسية</a></li>
-                <li><a href="#" class="hover:text-green-400 transition duration-300 dark:hover:text-green-300">عن الموقع</a></li>
-                <li><a href="#" class="hover:text-green-400 transition duration-300 dark:hover:text-green-300">الفتاوى</a></li>
-                <li><a href="#" class="hover:text-green-400 transition duration-300 dark:hover:text-green-300">اتصل بنا</a></li>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-green-700 text-white hidden">
+            <ul class="space-y-4 p-4">
+                <li><a href="#" class="block hover:text-green-300 transition">الرئيسية</a></li>
+                <li><a href="#" class="block hover:text-green-300 transition">عن الموقع</a></li>
+                <li><a href="#" class="block hover:text-green-300 transition">الفتاوى</a></li>
+                <li><a href="#" class="block hover:text-green-300 transition">اتصل بنا</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- سكربت AOS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js" defer></script>
+    <!-- Main Content -->
+    <header class="bg-green-800 text-white text-center py-16">
+        <h1 class="text-4xl font-bold mb-4">السلام عليكم</h1>
+        <p class="text-xl">مرحبًا بكم في <span class="text-green-300">قلعة السنة</span></p>
+    </header>
+
+    <section class="py-16 bg-gray-50 text-center">
+        <h2 class="text-3xl font-semibold mb-8">عن الموقع</h2>
+        <p class="text-lg text-gray-700 max-w-4xl mx-auto">
+            موقع قلعة السنة يقدم لكم معلومات دينية قيمة ومستخلصة من السنة النبوية الشريفة والقرآن الكريم.
+        </p>
+    </section>
+
+    <section class="py-16 bg-white text-center">
+        <h2 class="text-3xl font-semibold mb-8">اتصل بنا</h2>
+        <p class="text-lg text-gray-700">إذا كانت لديك أي استفسارات أو تريد التفاعل معنا، لا تتردد في الاتصال بنا.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-700 text-white text-center py-6">
+        <p>&copy; 2025 قلعة السنة. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
     <script>
-        AOS.init({
-            duration: 1000,  // مدة التأثير
-            easing: 'ease-out',  // التأثير السلس
-            once: true  // التأثير يحدث مرة واحدة فقط
-        });
-
-        // زر تغيير الوضع الداكن
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        themeToggleBtn.addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
-            // حفظ الوضع الحالي
-            if (document.documentElement.classList.contains('dark')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.removeItem('theme');
-            }
-        });
-
-        // فتح وإغلاق قائمة الجوال
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+        document.getElementById("mobile-menu-toggle").addEventListener("click", function() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
         });
     </script>
 
