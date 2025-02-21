@@ -4,35 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>قلعة السنة</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <!-- إضافة مكتبة AOS لتحريك العناصر عند التمرير -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- إضافة مكتبة Hover.css -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" rel="stylesheet">
-</head>
-<body class="bg-gradient-to-br from-green-900 to-green-800 text-white p-6">
-    <div class="flex justify-center items-center min-h-screen">
-        <div class="bg-green-800 p-12 rounded-3xl shadow-2xl w-full max-w-md text-center border-4 border-green-500 transform hover:scale-105 transition duration-300 ease-in-out"
-            data-aos="fade-up" data-aos-duration="1500">
-            <img src="/images/logo.png" alt="قلعة السنة" class="w-24 h-24 mx-auto mb-6 rounded-full border-4 border-gold-500 shadow-lg" />
-            <h1 class="text-5xl font-extrabold mb-6 text-green-400 drop-shadow-lg animate-pulse" data-aos="fade-right">السلام عليكم</h1>
-            <p class="text-lg mb-6 font-medium text-gray-300" data-aos="fade-left">مرحبًا بكم في <span class='text-green-400'>قلعة السنة</span></p>
-            <img src="/images/banner.jpg" alt="قلعة السنة" class="w-full h-48 object-cover rounded-xl mb-6 border-4 border-gold-500 shadow-xl" />
-            <p class="text-md italic text-gray-300 mb-8 border-t border-b border-gray-500 py-3" data-aos="fade-up">"وَتَوَكَّلْ عَلَى اللَّهِ وَكَفَى بِاللَّهِ وَكِيلًا" (النساء: 81)</p>
-            <div class="flex justify-center space-x-6">
-                <!-- فقط أيقونة Discord مع تأثير hover -->
-                <a href="https://discord.gg/3XjsUfruQZ" class="text-3xl p-4 border-4 border-gold-500 rounded-full hover:bg-green-500 hover:text-black transition flex items-center justify-center w-20 h-20 shadow-lg hover:shadow-green-500 hvr-grow">
-                    <i class="fab fa-discord"></i>
-                </a>
-            </div>
-        </div>
-    </div>
 
-    <!-- إضافة سكربت AOS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <!-- روابط المكتبات الأساسية -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://kit.fontawesome.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://kit.fontawesome.com">
+
+    <!-- مكتبة TailwindCSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
+    <!-- مكتبة AOS لتأثيرات التمرير -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- مكتبة Hover.css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" rel="stylesheet">
+
+    <!-- تحميل FontAwesome بشكل غير متزامن -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" async></script>
+
+    <!-- إضافة مكتبة تغيير الوضع الداكن -->
     <script>
-        AOS.init();
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-r from-green-800 via-green-600 to-green-400 text-white dark:bg-gradient-to-r dark:from-gray-800 dark:via-gray-600 dark:to-gray-400 dark:text-gray-200 transition-colors duration-500">
+
+    <!-- Navbar -->
+    <nav class="bg-green-900 text-white shadow-lg p-4 dark:bg-gray-900">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-extrabold">قلعة السنة</a>
+            <ul class="flex space-x-8 text-lg">
+                <li><a href="#" class="hover:text-green-400 transition duration-300 dark:hover:text-green-300">الرئيسية</a></li>
+                <li><a href="#" class="hover:text-green-400 transition duration-300 dark:hover:text-green-300">عن الموقع</a></li>
+                <li><a href="#" class="hover:text-green-400 transition duration-300 dark:hover:text-green-300">الفتاوى</a></li>
+                <li><a href="#" class="hover:text-green-400 transition duration-300 dark:hover:text-green-300">اتصل بنا</a></li>
+            </ul>
+            <!-- زر الوضع الداكن -->
+            <button id="theme-toggle" class="text-white bg-green-600 hover:bg-green-500 p-2 rounded-full">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-cover bg-center h-screen" style="background-image: url('/images/hero-banner.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto text-center text-white py-32">
+            <h1 class="text-5xl font-extrabold mb-6 animate__animated animate__fadeIn" data-aos="fade-up">مرحبًا بكم في قلعة السنة</h1>
+            <p class="text-lg mb-8 animate__animated animate__fadeIn" data-aos="fade-up" data-aos-delay="300">موقع ديني يهتم بنشر الفتاوى والمعلومات الإسلامية</p>
+            <a href="#about" class="bg-green-500 px-6 py-3 rounded-full text-xl font-medium hover:bg-green-600 transition duration-300 dark:bg-gray-700 dark:hover:bg-gray-600">اكتشف المزيد</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100 dark:bg-gray-800 text-center">
+        <h2 class="text-3xl font-bold mb-8 text-gray-800 dark:text-gray-200">عن الموقع</h2>
+        <p class="text-lg mb-8 mx-auto max-w-3xl text-gray-700 dark:text-gray-300">موقع قلعة السنة هو مصدر موثوق للمحتوى الديني الإسلامي، يضم مجموعة من المقالات، الفتاوى، والدروس التي تساهم في تعزيز المعرفة الإسلامية وتقديم حلول دينية حديثة.</p>
+        <a href="#services" class="bg-green-500 px-6 py-3 rounded-full text-xl font-medium hover:bg-green-600 transition duration-300 dark:bg-gray-700 dark:hover:bg-gray-600">خدماتنا</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white py-8 text-center dark:bg-gray-900">
+        <p class="mb-4">&copy; 2025 قلعة السنة - جميع الحقوق محفوظة</p>
+        <div>
+            <a href="#" class="text-xl mx-4 text-white hover:text-green-400 transition duration-300 dark:hover:text-green-300"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-xl mx-4 text-white hover:text-green-400 transition duration-300 dark:hover:text-green-300"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-xl mx-4 text-white hover:text-green-400 transition duration-300 dark:hover:text-green-300"><i class="fab fa-instagram"></i></a>
+            <a href="https://discord.gg/3XjsUfruQZ" class="text-xl mx-4 text-white hover:text-green-400 transition duration-300 dark:hover:text-green-300"><i class="fab fa-discord"></i></a>
+        </div>
+    </footer>
+
+    <!-- سكربت AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js" defer></script>
+    <script>
+        AOS.init({
+            duration: 1000,  // مدة التأثير
+            easing: 'ease-out',  // التأثير السلس
+            once: true  // التأثير يحدث مرة واحدة فقط
+        });
+
+        // زر تغيير الوضع الداكن
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            // حفظ الوضع الحالي
+            if (document.documentElement.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.removeItem('theme');
+            }
+        });
     </script>
 </body>
 </html>
