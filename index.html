@@ -82,24 +82,23 @@
         .toggle-btn i {
             font-size: 24px;
         }
-        /* زر الديسكورد في وسط الصفحة */
+        /* زر الديسكورد */
         .discord-btn {
-            position: absolute;
-            top: 45%; /* رفع الزر قليلاً */
-            left: 50%;
-            transform: translate(-50%, -50%);
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
             background-color: #7289da; /* لون ديسكورد */
             color: white;
-            padding: 40px; /* تكبير الزر */
+            padding: 12px 20px;
             border-radius: 50%;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            font-size: 48px; /* زيادة حجم الأيقونة */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            font-size: 24px;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
         .discord-btn:hover {
             background-color: #5b6eae;
-            transform: translate(-50%, -50%) scale(1.1);
+            transform: scale(1.1);
         }
 
         /* تحسين المظهر في الأجهزة الصغيرة */
