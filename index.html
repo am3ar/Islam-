@@ -25,6 +25,7 @@
 
     <!-- إضافة مكتبة تغيير الوضع الداكن -->
     <script>
+        // التحقق من تخزين الوضع الداكن في المتصفح عند تحميل الصفحة
         if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.classList.add('dark');
         }
@@ -36,46 +37,36 @@
     <nav class="bg-green-900 text-white shadow-lg p-4 dark:bg-gray-900">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-3xl font-extrabold">قلعة السنة</a>
-            <ul class="flex space-x-8 text-lg">
+            
+            <!-- قائمة التنقل للأجهزة الكبيرة -->
+            <ul class="hidden md:flex space-x-8 text-lg">
                 <li><a href="#" class="hover:text-green-400 transition duration-300 dark:hover:text-green-300">الرئيسية</a></li>
                 <li><a href="#" class="hover:text-green-400 transition duration-300 dark:hover:text-green-300">عن الموقع</a></li>
                 <li><a href="#" class="hover:text-green-400 transition duration-300 dark:hover:text-green-300">الفتاوى</a></li>
                 <li><a href="#" class="hover:text-green-400 transition duration-300 dark:hover:text-green-300">اتصل بنا</a></li>
             </ul>
+
+            <!-- زر قائمة التنقل للأجهزة الصغيرة -->
+            <button id="mobile-menu-button" class="md:hidden text-white p-2">
+                <i class="fas fa-bars"></i>
+            </button>
+
             <!-- زر الوضع الداكن -->
             <button id="theme-toggle" class="text-white bg-green-600 hover:bg-green-500 p-2 rounded-full">
                 <i class="fas fa-moon"></i>
             </button>
         </div>
+
+        <!-- قائمة منسدلة للأجهزة الصغيرة -->
+        <div id="mobile-menu" class="md:hidden bg-green-900 text-white w-full hidden">
+            <ul class="space-y-4 p-4 text-lg">
+                <li><a href="#" class="hover:text-green-400 transition duration-300 dark:hover:text-green-300">الرئيسية</a></li>
+                <li><a href="#" class="hover:text-green-400 transition duration-300 dark:hover:text-green-300">عن الموقع</a></li>
+                <li><a href="#" class="hover:text-green-400 transition duration-300 dark:hover:text-green-300">الفتاوى</a></li>
+                <li><a href="#" class="hover:text-green-400 transition duration-300 dark:hover:text-green-300">اتصل بنا</a></li>
+            </ul>
+        </div>
     </nav>
-
-    <!-- Hero Section -->
-    <header class="relative bg-cover bg-center h-screen" style="background-image: url('/images/hero-banner.jpg');">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="container mx-auto text-center text-white py-32">
-            <h1 class="text-5xl font-extrabold mb-6 animate__animated animate__fadeIn" data-aos="fade-up">مرحبًا بكم في قلعة السنة</h1>
-            <p class="text-lg mb-8 animate__animated animate__fadeIn" data-aos="fade-up" data-aos-delay="300">موقع ديني يهتم بنشر الفتاوى والمعلومات الإسلامية</p>
-            <a href="#about" class="bg-green-500 px-6 py-3 rounded-full text-xl font-medium hover:bg-green-600 transition duration-300 dark:bg-gray-700 dark:hover:bg-gray-600">اكتشف المزيد</a>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-100 dark:bg-gray-800 text-center">
-        <h2 class="text-3xl font-bold mb-8 text-gray-800 dark:text-gray-200">عن الموقع</h2>
-        <p class="text-lg mb-8 mx-auto max-w-3xl text-gray-700 dark:text-gray-300">موقع قلعة السنة هو مصدر موثوق للمحتوى الديني الإسلامي، يضم مجموعة من المقالات، الفتاوى، والدروس التي تساهم في تعزيز المعرفة الإسلامية وتقديم حلول دينية حديثة.</p>
-        <a href="#services" class="bg-green-500 px-6 py-3 rounded-full text-xl font-medium hover:bg-green-600 transition duration-300 dark:bg-gray-700 dark:hover:bg-gray-600">خدماتنا</a>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-green-900 text-white py-8 text-center dark:bg-gray-900">
-        <p class="mb-4">&copy; 2025 قلعة السنة - جميع الحقوق محفوظة</p>
-        <div>
-            <a href="#" class="text-xl mx-4 text-white hover:text-green-400 transition duration-300 dark:hover:text-green-300"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="text-xl mx-4 text-white hover:text-green-400 transition duration-300 dark:hover:text-green-300"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="text-xl mx-4 text-white hover:text-green-400 transition duration-300 dark:hover:text-green-300"><i class="fab fa-instagram"></i></a>
-            <a href="https://discord.gg/3XjsUfruQZ" class="text-xl mx-4 text-white hover:text-green-400 transition duration-300 dark:hover:text-green-300"><i class="fab fa-discord"></i></a>
-        </div>
-    </footer>
 
     <!-- سكربت AOS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js" defer></script>
@@ -97,6 +88,14 @@
                 localStorage.removeItem('theme');
             }
         });
+
+        // فتح وإغلاق قائمة الجوال
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
     </script>
+
 </body>
 </html>
