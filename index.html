@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="ar">
+<!DOCTYPE html>
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +20,10 @@
             color: white;
             padding: 15px;
             text-align: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
         }
         nav ul {
             list-style: none;
@@ -66,6 +71,43 @@
             background: #004b87;
             color: white;
         }
+        footer p {
+            margin: 0;
+        }
+        .section-heading {
+            font-size: 24px;
+            color: #004b87;
+            border-bottom: 2px solid #004b87;
+            padding-bottom: 5px;
+        }
+        .section-content {
+            margin-top: 15px;
+            font-size: 16px;
+            color: #666;
+        }
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        form button {
+            padding: 10px 15px;
+            background: #004b87;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #003b6f;
+        }
     </style>
 </head>
 <body>
@@ -80,50 +122,51 @@
                 <li><a href="#contact">اتصل بنا</a></li>
             </ul>
         </nav>
-    </header><div class="search-bar">
-    <input type="text" id="searchInput" placeholder="ابحث في الموقع...">
-    <button onclick="searchContent()">🔍</button>
-</div>
+    </header>
 
-<section id="home">
-    <h2>مرحبا بكم في الموقع الإسلامي</h2>
-    <p>قال الله تعالى: "إِنَّ هَذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ" (الإسراء: 9)</p>
-</section>
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="ابحث في الموقع...">
+        <button onclick="searchContent()">🔍</button>
+    </div>
 
-<section id="fatwas">
-    <h2>الفتاوى</h2>
-    <p>مجموعة من الفتاوى الشرعية الموثوقة.</p>
-</section>
+    <section id="home">
+        <h2 class="section-heading">مرحبا بكم في الموقع الإسلامي</h2>
+        <p class="section-content">قال الله تعالى: "إِنَّ هَذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ" (الإسراء: 9)</p>
+    </section>
 
-<section id="articles">
-    <h2>المقالات</h2>
-    <p>مقالات إسلامية متنوعة لزيادة المعرفة.</p>
-</section>
+    <section id="fatwas">
+        <h2 class="section-heading">الفتاوى</h2>
+        <p class="section-content">مجموعة من الفتاوى الشرعية الموثوقة.</p>
+    </section>
 
-<section id="books">
-    <h2>الكتب الإسلامية</h2>
-    <p>تحميل وقراءة الكتب الإسلامية مجانًا.</p>
-</section>
+    <section id="articles">
+        <h2 class="section-heading">المقالات</h2>
+        <p class="section-content">مقالات إسلامية متنوعة لزيادة المعرفة.</p>
+    </section>
 
-<section id="contact">
-    <h2>اتصل بنا</h2>
-    <form>
-        <label for="name">الاسم:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">البريد الإلكتروني:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="message">الرسالة:</label>
-        <textarea id="message" name="message" required></textarea>
-        
-        <button type="submit">إرسال</button>
-    </form>
-</section>
+    <section id="books">
+        <h2 class="section-heading">الكتب الإسلامية</h2>
+        <p class="section-content">تحميل وقراءة الكتب الإسلامية مجانًا.</p>
+    </section>
 
-<footer>
-    <p>&copy; 2025 جميع الحقوق محفوظة | الموقع الإسلامي</p>
-</footer>
+    <section id="contact">
+        <h2 class="section-heading">اتصل بنا</h2>
+        <form>
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" name="name" required>
 
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">الرسالة:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">إرسال</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 جميع الحقوق محفوظة | الموقع الإسلامي</p>
+    </footer>
 </body>
 </html>
