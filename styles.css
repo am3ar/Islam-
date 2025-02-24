@@ -86,8 +86,8 @@ section {
     padding: 40px;
     margin: 20px auto;
     background-color: #fff;
-    width: 80%;
-    max-width: 1000px;
+    width: 90%;
+    max-width: 1200px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     opacity: 0;
@@ -126,6 +126,7 @@ footer {
     100% { opacity: 1; }
 }
 
+/* التوافق مع الشاشات الصغيرة */
 @media (max-width: 768px) {
     body {
         font-size: 14px;
@@ -137,6 +138,17 @@ footer {
 
     section {
         width: 90%;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cta-button {
+        display: block;
+        width: 100%;
+        text-align: center;
     }
 }
 
