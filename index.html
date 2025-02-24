@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الموقع الإسلامي - شبيه ابن باز</title>
     <style>
-        /* تحسين UX وUI */
+        /* تحسين UI و UX */
         body {
             font-family: 'Tajawal', sans-serif;
             background-color: #f4f7fa;
@@ -16,7 +16,6 @@
             box-sizing: border-box;
         }
 
-        /* تحسين تصميم الهيدر */
         header {
             background: linear-gradient(135deg, #003c63, #004b87);
             color: white;
@@ -34,7 +33,6 @@
             color: #ffcc00;
         }
 
-        /* تنسيق القائمة العلوية */
         nav ul {
             display: flex;
             justify-content: center;
@@ -66,7 +64,6 @@
             border-radius: 8px;
         }
 
-        /* تحسين شريط البحث */
         .search-bar {
             text-align: center;
             margin-top: 30px;
@@ -103,7 +100,6 @@
             color: #003c63;
         }
 
-        /* تحسين الأقسام */
         section {
             background: #fff;
             border-radius: 15px;
@@ -134,7 +130,6 @@
             text-align: justify;
         }
 
-        /* تحسين الفوتر */
         footer {
             background-color: #003c63;
             color: white;
@@ -147,6 +142,40 @@
         footer p {
             margin: 0;
             font-size: 14px;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            font-size: 20px;
+            color: #003c63;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .button {
+            background-color: #ffcc00;
+            color: #003c63;
+            padding: 10px 25px;
+            font-size: 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #003c63;
+            color: white;
         }
 
         /* تحسين تجربة الأجهزة المحمولة */
@@ -182,6 +211,11 @@
             }
         }
     </style>
+    <script>
+        function searchContent() {
+            alert("البحث قيد التنفيذ! يمكن تطوير هذه الوظيفة لتكون أكثر دقة.");
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -205,21 +239,41 @@
     <section id="home">
         <h2>مرحبًا بكم في الموقع الإسلامي</h2>
         <p>قال الله تعالى: "إِنَّ هَذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ" (الإسراء: 9)</p>
+        <div class="card">
+            <h3>التصميم المتجاوب</h3>
+            <p>الموقع يتكيف مع جميع الأجهزة من هواتف ذكية إلى أجهزة الكمبيوتر المكتبية للحصول على أفضل تجربة.</p>
+            <a href="#" class="button">استكشاف المزيد</a>
+        </div>
     </section>
 
     <section id="fatwas">
         <h2>الفتاوى</h2>
-        <p>مجموعة من الفتاوى الشرعية الموثوقة.</p>
+        <p>مجموعة من الفتاوى الشرعية الموثوقة. يمكن تصفية الفتاوى حسب الموضوعات المختلفة.</p>
+        <div class="card">
+            <h3>الفتاوى المتنوعة</h3>
+            <p>استعرض الفتاوى المتعلقة بالعبادات والمعاملات اليومية.</p>
+            <a href="#" class="button">عرض الفتاوى</a>
+        </div>
     </section>
 
     <section id="articles">
         <h2>المقالات</h2>
-        <p>مقالات إسلامية متنوعة لزيادة المعرفة.</p>
+        <p>مقالات إسلامية متنوعة لزيادة المعرفة. يمكن تصفية المقالات حسب المواضيع.</p>
+        <div class="card">
+            <h3>مقالات دينية</h3>
+            <p>اكتشف المقالات التي تغطي مجموعة واسعة من المواضيع الإسلامية.</p>
+            <a href="#" class="button">عرض المقالات</a>
+        </div>
     </section>
 
     <section id="books">
         <h2>الكتب الإسلامية</h2>
-        <p>تحميل وقراءة الكتب الإسلامية مجانًا.</p>
+        <p>تحميل وقراءة الكتب الإسلامية مجانًا. اختر من بين مجموعة متنوعة من الكتب.</p>
+        <div class="card">
+            <h3>الكتب المتوفرة</h3>
+            <p>استمتع بقراءة الكتب الإسلامية في أي وقت من خلال موقعنا.</p>
+            <a href="#" class="button">تحميل الكتب</a>
+        </div>
     </section>
 
     <section id="contact">
@@ -234,7 +288,7 @@
             <label for="message">الرسالة:</label>
             <textarea id="message" name="message" required></textarea>
 
-            <button type="submit">إرسال</button>
+            <button type="submit" class="button">إرسال</button>
         </form>
     </section>
 
