@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الموقع الإسلامي - شبيه ابن باز</title>
-    <script src="script.js" defer></script>
     <style>
+        /* إعادة ترتيب القالب */
         body {
             font-family: 'Tajawal', sans-serif;
-            background: #f4f7fb;
-            color: #333;
+            background-color: #f4f4f9;
             margin: 0;
             padding: 0;
             direction: rtl;
             box-sizing: border-box;
         }
 
-        /* الخانة العلوية */
         header {
-            background: linear-gradient(135deg, #004b87, #006c8d);
-            color: white;
-            padding: 30px;
+            background: linear-gradient(135deg, #003b5c, #005c87);
+            color: #fff;
             text-align: center;
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+            padding: 30px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
 
-        .logo {
-            font-size: 36px;
+        header .logo {
+            font-size: 40px;
             font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
         }
 
         nav ul {
@@ -37,150 +37,139 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            margin: 0;
+            margin-top: 20px;
         }
 
         nav ul li {
-            margin: 0 20px;
+            margin: 0 25px;
         }
 
         nav ul li a {
-            color: white;
             text-decoration: none;
-            font-weight: bold;
+            color: white;
             font-size: 18px;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background 0.3s ease;
+            font-weight: 600;
+            padding: 10px 20px;
+            transition: all 0.3s ease;
         }
 
         nav ul li a:hover {
-            background: #ffcc00;
-            color: #003c5b;
+            background-color: #ffcc00;
+            color: #003b5c;
+            border-radius: 25px;
         }
 
-        /* شريط البحث */
         .search-bar {
-            text-align: center;
             margin: 40px auto;
+            text-align: center;
         }
 
         .search-bar input {
-            padding: 15px;
-            width: 80%;
+            width: 75%;
             max-width: 500px;
-            border: 1px solid #ddd;
-            border-radius: 25px;
+            padding: 15px;
             font-size: 18px;
-            margin-right: 12px;
-            transition: border-color 0.3s ease;
+            border: 2px solid #ddd;
+            border-radius: 30px;
+            transition: all 0.3s ease;
         }
 
         .search-bar input:focus {
-            border-color: #004b87;
             outline: none;
+            border-color: #005c87;
         }
 
         .search-bar button {
             padding: 15px 25px;
-            background: #006c8d;
-            color: white;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
             font-size: 18px;
-            transition: background 0.3s ease, transform 0.3s ease;
+            color: white;
+            background-color: #003b5c;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
         .search-bar button:hover {
-            background: #003c5b;
-            transform: translateY(-2px);
+            background-color: #ffcc00;
+            color: #003b5c;
         }
 
-        /* تحسين تنسيق الأقسام */
         section {
-            padding: 40px;
-            background: white;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             margin: 40px auto;
-            width: 90%;
+            padding: 40px;
+            width: 80%;
             max-width: 1100px;
-            border-radius: 12px;
-            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
-            transition: box-shadow 0.3s ease;
-        }
-
-        section:hover {
-            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
         }
 
         section h2 {
-            color: #003c5b;
-            font-size: 32px;
-            font-weight: bold;
-            border-bottom: 4px solid #003c5b;
-            padding-bottom: 15px;
-            margin-bottom: 25px;
-            text-align: center;
+            color: #003b5c;
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 20px;
         }
 
         section p {
             font-size: 18px;
+            line-height: 1.6;
             color: #555;
-            line-height: 1.8;
             text-align: justify;
         }
 
-        /* نموذج الاتصال */
-        form label {
-            display: block;
-            margin: 15px 0 5px;
-            font-weight: bold;
-            font-size: 16px;
-            color: #003c5b;
-        }
-
-        form input, form textarea {
-            width: 100%;
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-
-        form button {
-            padding: 15px 30px;
-            background: #006c8d;
-            color: white;
-            border: none;
-            border-radius: 25px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-
-        form button:hover {
-            background: #003c5b;
-            transform: translateY(-2px);
-        }
-
-        /* التذييل */
         footer {
-            text-align: center;
-            padding: 30px;
-            background: #003c5b;
+            background-color: #003b5c;
             color: white;
-            margin-top: 40px;
-            font-size: 16px;
-            box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 30px 0;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
         }
 
         footer p {
             margin: 0;
         }
 
-        /* التصميم المتجاوب */
-        @media (max-width: 1024px) {
+        form input, form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            color: #333;
+        }
+
+        form button {
+            padding: 15px 30px;
+            background-color: #003b5c;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #ffcc00;
+            color: #003b5c;
+        }
+
+        @media (max-width: 768px) {
+            header .logo {
+                font-size: 30px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin-bottom: 15px;
+            }
+
             .search-bar input {
                 width: 85%;
             }
@@ -191,78 +180,10 @@
 
             section {
                 width: 90%;
+                padding: 30px;
             }
 
-            header {
-                padding: 25px 15px;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav ul li {
-                margin: 12px 0;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .logo {
-                font-size: 30px;
-            }
-
-            nav ul li a {
-                font-size: 16px;
-            }
-
-            section h2 {
-                font-size: 26px;
-            }
-
-            section p {
-                font-size: 16px;
-            }
-
-            footer p {
-                font-size: 14px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .logo {
-                font-size: 28px;
-            }
-
-            nav ul li a {
-                font-size: 14px;
-            }
-
-            section h2 {
-                font-size: 22px;
-            }
-
-            section p {
-                font-size: 14px;
-            }
-
-            footer p {
-                font-size: 12px;
-            }
-
-            .search-bar input {
-                width: 75%;
-            }
-
-            .search-bar button {
-                width: 75%;
-            }
-
-            form input, form textarea {
-                font-size: 14px;
-            }
-
-            form button {
+            footer {
                 font-size: 14px;
             }
         }
@@ -288,23 +209,23 @@
     </div>
 
     <section id="home">
-        <h2>مرحبا بكم في الموقع الإسلامي</h2>
+        <h2>مرحبًا بكم في الموقع الإسلامي</h2>
         <p>قال الله تعالى: "إِنَّ هَذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ" (الإسراء: 9)</p>
     </section>
 
     <section id="fatwas">
         <h2>الفتاوى</h2>
-        <p>مجموعة من الفتاوى الشرعية الموثوقة من كبار العلماء والمراجع الإسلامية.</p>
+        <p>مجموعة من الفتاوى الشرعية الموثوقة التي تساهم في إثراء معرفتك بالدين الإسلامي.</p>
     </section>
 
     <section id="articles">
         <h2>المقالات</h2>
-        <p>مقالات إسلامية متنوعة لزيادة المعرفة والفهم حول المواضيع الدينية المتنوعة.</p>
+        <p>مقالات إسلامية قيمة لتوسيع الفهم وزيادة المعرفة حول الموضوعات الدينية.</p>
     </section>
 
     <section id="books">
         <h2>الكتب الإسلامية</h2>
-        <p>تحميل وقراءة الكتب الإسلامية مجانًا، مكتبة غنية بالكتب القيمة التي تساهم في نشر العلم.</p>
+        <p>تحميل الكتب الإسلامية القيمة والمهمة في مجالات متنوعة.</p>
     </section>
 
     <section id="contact">
