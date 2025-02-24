@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الموقع الإسلامي - شبيه ابن باز</title>
-    <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <style>
         /* تحسين التصميم العام */
         body {
             font-family: 'Tajawal', sans-serif;
-            background: #f7f9fc;
+            background: #f3f4f6;
             color: #333;
             margin: 0;
             padding: 0;
@@ -20,17 +19,18 @@
 
         /* تحسين تصميم الخانة العلوية */
         header {
-            background: linear-gradient(135deg, #004b87, #0069c0);
+            background: linear-gradient(135deg, #003c5b, #005f87);
             color: white;
             padding: 20px 10px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
         }
 
         .logo {
-            font-size: 30px;
+            font-size: 32px;
             font-weight: bold;
             margin-bottom: 10px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
         }
 
         nav ul {
@@ -50,11 +50,13 @@
             text-decoration: none;
             font-weight: 500;
             font-size: 18px;
-            transition: color 0.3s ease-in-out;
+            padding: 5px 0;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
         }
 
         nav ul li a:hover {
             color: #ffcc00;
+            border-bottom: 2px solid #ffcc00;
         }
 
         /* تحسين شريط البحث */
@@ -64,7 +66,7 @@
         }
 
         .search-bar input {
-            padding: 12px;
+            padding: 14px;
             width: 80%;
             max-width: 400px;
             border: 1px solid #ccc;
@@ -75,13 +77,13 @@
         }
 
         .search-bar input:focus {
-            border-color: #0069c0;
+            border-color: #003c5b;
             outline: none;
         }
 
         .search-bar button {
             padding: 12px 20px;
-            background: #004b87;
+            background: #005f87;
             color: white;
             border: none;
             border-radius: 25px;
@@ -91,7 +93,7 @@
         }
 
         .search-bar button:hover {
-            background: #003b6f;
+            background: #003c5b;
         }
 
         /* تحسين تنسيق الأقسام */
@@ -102,16 +104,22 @@
             width: 90%;
             max-width: 1000px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
         }
 
         section h2 {
-            color: #004b87;
-            font-size: 26px;
-            border-bottom: 3px solid #004b87;
+            color: #003c5b;
+            font-size: 28px;
+            border-bottom: 3px solid #003c5b;
             padding-bottom: 10px;
             margin-bottom: 20px;
             text-align: center;
+            text-transform: uppercase;
         }
 
         section p {
@@ -127,6 +135,7 @@
             margin: 15px 0 5px;
             font-weight: bold;
             font-size: 16px;
+            color: #003c5b;
         }
 
         form input, form textarea {
@@ -140,7 +149,7 @@
 
         form button {
             padding: 14px 25px;
-            background: #004b87;
+            background: #005f87;
             color: white;
             border: none;
             border-radius: 25px;
@@ -150,14 +159,14 @@
         }
 
         form button:hover {
-            background: #003b6f;
+            background: #003c5b;
         }
 
         /* تحسين التذييل */
         footer {
             text-align: center;
             padding: 20px;
-            background: #004b87;
+            background: #003c5b;
             color: white;
             margin-top: 30px;
         }
@@ -206,7 +215,7 @@
             }
 
             section h2 {
-                font-size: 22px;
+                font-size: 24px;
             }
 
             section p {
