@@ -3,32 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الموقع الإسلامي - الموقع الأنيق</title>
+    <title>الموقع الإسلامي - الموقع الاحترافي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         /* إعدادات أساسية */
         body {
             font-family: 'Tajawal', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fafafa;
+            background-color: #f4f4f4;
             color: #333;
             direction: rtl;
+            transition: background-color 0.3s ease;
         }
 
         header {
-            background-color: #3a3a3a;
+            background-color: #2c3e50;
             color: white;
             text-align: center;
             padding: 20px;
-        }
-
-        header .logo {
-            font-size: 40px;
+            font-size: 30px;
             font-weight: bold;
         }
 
         nav {
-            background-color: #2c3e50;
+            background-color: #34495e;
             padding: 15px;
             text-align: center;
         }
@@ -42,7 +41,7 @@
         }
 
         nav ul li {
-            margin: 0 15px;
+            margin: 0 20px;
         }
 
         nav ul li a {
@@ -66,7 +65,7 @@
         }
 
         .content h2 {
-            font-size: 28px;
+            font-size: 30px;
             color: #34495e;
             margin-bottom: 20px;
         }
@@ -79,7 +78,7 @@
         }
 
         footer {
-            background-color: #2c3e50;
+            background-color: #34495e;
             color: white;
             text-align: center;
             padding: 20px;
@@ -95,10 +94,21 @@
             text-decoration: none;
         }
 
-        /* توافق مع الهواتف المحمولة */
+        .dark-mode {
+            background-color: #2f3640;
+            color: white;
+        }
+
+        /* الوضع الداكن */
+        body.dark-mode {
+            background-color: #2f3640;
+            color: white;
+        }
+
+        /* التوافق مع الهواتف المحمولة */
         @media (max-width: 768px) {
-            header .logo {
-                font-size: 30px;
+            header {
+                font-size: 25px;
             }
 
             nav ul {
@@ -118,13 +128,35 @@
                 font-size: 12px;
             }
         }
+
+        /* شريط متحرك للآيات */
+        .marquee {
+            background-color: #f39c12;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 20px;
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">📖 الموقع الإسلامي</div>
+    الموقع الإسلامي
 </header>
+
+<!-- شريط متحرك -->
+<div class="marquee">
+    "إِنَّ هَذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ" - سورة الإسراء
+</div>
 
 <nav>
     <ul>
@@ -136,25 +168,26 @@
     </ul>
 </nav>
 
+<!-- محتوى الصفحة -->
 <div class="content" id="home">
     <h2>مرحبًا بكم في الموقع الإسلامي</h2>
     <p>قال الله تعالى: "إِنَّ هَذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ" (الإسراء: 9)</p>
-    <p>هذا الموقع يهدف إلى تقديم معلومات وموارد دينية للمسلمين عبر الإنترنت.</p>
+    <p>نحن نقدم لكم أفضل الفتاوى، المقالات، والكتب الإسلامية من مصادر موثوقة.</p>
 </div>
 
 <div class="content" id="fatwas">
     <h2>الفتاوى</h2>
-    <p>ستجد في هذا القسم مجموعة من الفتاوى الشرعية الموثوقة التي تهمك.</p>
+    <p>اكتشف الفتاوى الشرعية المعتمدة التي يقدمها كبار العلماء في العالم الإسلامي.</p>
 </div>
 
 <div class="content" id="articles">
     <h2>المقالات</h2>
-    <p>اقرأ مقالات إسلامية قيمة لتعميق معرفتك وفهمك للدين.</p>
+    <p>قراءة مقالات علمية ودينية لتحسين فهمك للدين الإسلامي.</p>
 </div>
 
 <div class="content" id="books">
     <h2>الكتب الإسلامية</h2>
-    <p>استمتع بقراءة الكتب الإسلامية المختلفة التي يمكنك تحميلها مجانًا.</p>
+    <p>تحميل الكتب الإسلامية مجانا وقراءتها مباشرة من موقعنا.</p>
 </div>
 
 <div class="content" id="contact">
@@ -173,6 +206,19 @@
 <footer>
     <p>&copy; 2025 جميع الحقوق محفوظة | <a href="#">سياسة الخصوصية</a> | <a href="#">الشروط والأحكام</a></p>
 </footer>
+
+<script>
+    // تبديل الوضع الفاتح والداكن
+    const toggleDarkMode = () => {
+        document.body.classList.toggle('dark-mode');
+    };
+
+    // إضافة زر تغيير الوضع
+    const darkModeButton = document.createElement('button');
+    darkModeButton.innerText = 'تبديل الوضع';
+    darkModeButton.onclick = toggleDarkMode;
+    document.body.appendChild(darkModeButton);
+</script>
 
 </body>
 </html>
