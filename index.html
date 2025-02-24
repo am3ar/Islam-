@@ -17,18 +17,21 @@
         }
 
         header {
-            background: #003c63;
+            background: #1a73e8;
             color: #fff;
             padding: 20px 0;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         header .logo {
             font-size: 36px;
             font-weight: bold;
             letter-spacing: 2px;
-            color: #ffcc00;
+            color: #fff;
         }
 
         /* التنقل العلوي */
@@ -38,7 +41,7 @@
             padding: 0;
             margin: 10px 0;
             list-style: none;
-            background-color: #003c63;
+            background-color: #1a73e8;
             border-radius: 8px;
             overflow: hidden;
         }
@@ -58,7 +61,7 @@
 
         nav ul li a:hover {
             background-color: #ffcc00;
-            color: #003c63;
+            color: #1a73e8;
             border-radius: 8px;
         }
 
@@ -79,7 +82,7 @@
 
         .search-bar button {
             padding: 12px 20px;
-            background-color: #003c63;
+            background-color: #1a73e8;
             color: white;
             border: none;
             border-radius: 25px;
@@ -89,7 +92,7 @@
 
         .search-bar button:hover {
             background-color: #ffcc00;
-            color: #003c63;
+            color: #1a73e8;
         }
 
         /* أقسام الموقع */
@@ -104,7 +107,7 @@
         }
 
         section h2 {
-            color: #003c63;
+            color: #1a73e8;
             font-size: 28px;
             font-weight: 700;
             margin-bottom: 20px;
@@ -118,8 +121,32 @@
             text-align: justify;
         }
 
+        /* إضافة شريط تمرير للمحتوى */
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px 0;
+            justify-content: space-between;
+        }
+
+        .carousel div {
+            flex: 0 0 30%;
+            background: #f4f7fa;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .carousel div:hover {
+            transform: scale(1.05);
+        }
+
+        /* التذييل */
         footer {
-            background-color: #003c63;
+            background-color: #1a73e8;
             color: white;
             text-align: center;
             padding: 20px 0;
@@ -163,6 +190,10 @@
             footer {
                 font-size: 12px;
             }
+
+            .carousel div {
+                flex: 0 0 80%;
+            }
         }
     </style>
 </head>
@@ -199,12 +230,38 @@
 
     <section id="fatwas">
         <h2>الفتاوى</h2>
-        <p>مجموعة من الفتاوى الشرعية الموثوقة. يمكن تصفية الفتاوى حسب الموضوعات المختلفة.</p>
+        <div class="carousel">
+            <div>
+                <h3>الفتوى 1</h3>
+                <p>نبذة عن الفتوى الأولى...</p>
+            </div>
+            <div>
+                <h3>الفتوى 2</h3>
+                <p>نبذة عن الفتوى الثانية...</p>
+            </div>
+            <div>
+                <h3>الفتوى 3</h3>
+                <p>نبذة عن الفتوى الثالثة...</p>
+            </div>
+        </div>
     </section>
 
     <section id="articles">
         <h2>المقالات</h2>
-        <p>مقالات إسلامية متنوعة لزيادة المعرفة. يمكن تصفية المقالات حسب المواضيع.</p>
+        <div class="carousel">
+            <div>
+                <h3>مقال 1</h3>
+                <p>مقال عن موضوع إسلامي مهم...</p>
+            </div>
+            <div>
+                <h3>مقال 2</h3>
+                <p>مقال آخر عن موضوع حديث...</p>
+            </div>
+            <div>
+                <h3>مقال 3</h3>
+                <p>مقال عن جوانب دينية مهمة...</p>
+            </div>
+        </div>
     </section>
 
     <section id="books">
