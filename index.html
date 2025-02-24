@@ -3,33 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الموقع الإسلامي - شبيه ابن باز</title>
+    <title>الموقع الإسلامي</title>
     <style>
-        /* تحسين UI و UX */
         body {
             font-family: 'Tajawal', sans-serif;
-            background-color: #f4f7fa;
-            color: #444;
             margin: 0;
             padding: 0;
             direction: rtl;
+            background-color: #f4f7fa;
+            color: #444;
             box-sizing: border-box;
         }
 
         header {
-            background: linear-gradient(135deg, #003c63, #004b87);
-            color: white;
+            background: #003c63;
+            color: #fff;
+            padding: 20px 0;
             text-align: center;
-            padding: 25px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            border-bottom: 5px solid #ffcc00;
         }
 
         header .logo {
-            font-size: 38px;
+            font-size: 36px;
             font-weight: bold;
             letter-spacing: 2px;
-            margin-bottom: 10px;
             color: #ffcc00;
         }
 
@@ -37,10 +34,10 @@
             display: flex;
             justify-content: center;
             padding: 0;
-            margin: 0;
+            margin: 10px 0;
             list-style: none;
             background-color: #003c63;
-            border-radius: 15px;
+            border-radius: 8px;
             overflow: hidden;
         }
 
@@ -49,11 +46,10 @@
         }
 
         nav ul li a {
-            color: white;
+            color: #fff;
             text-decoration: none;
             font-size: 18px;
-            font-weight: 600;
-            padding: 15px 30px;
+            padding: 15px 25px;
             display: block;
             transition: background-color 0.3s ease;
         }
@@ -66,31 +62,24 @@
 
         .search-bar {
             text-align: center;
-            margin-top: 30px;
+            margin: 40px 0;
         }
 
         .search-bar input {
             width: 80%;
             max-width: 600px;
-            padding: 15px;
+            padding: 12px;
             font-size: 16px;
-            border-radius: 30px;
+            border-radius: 25px;
             border: 2px solid #ccc;
-            transition: border-color 0.3s ease;
-        }
-
-        .search-bar input:focus {
-            border-color: #ffcc00;
-            outline: none;
         }
 
         .search-bar button {
-            padding: 15px 25px;
-            font-size: 16px;
+            padding: 12px 20px;
             background-color: #003c63;
             color: white;
             border: none;
-            border-radius: 30px;
+            border-radius: 25px;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
@@ -102,25 +91,20 @@
 
         section {
             background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            margin: 40px auto;
-            padding: 40px;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px auto;
             width: 80%;
             max-width: 1100px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        section:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
         }
 
         section h2 {
             color: #003c63;
-            font-size: 30px;
+            font-size: 28px;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            text-align: center;
         }
 
         section p {
@@ -134,7 +118,7 @@
             background-color: #003c63;
             color: white;
             text-align: center;
-            padding: 25px 0;
+            padding: 20px 0;
             box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
             border-top: 5px solid #ffcc00;
         }
@@ -146,14 +130,14 @@
 
         .card {
             background-color: #f9f9f9;
-            border-radius: 12px;
+            border-radius: 10px;
             padding: 20px;
             margin-top: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .card h3 {
-            font-size: 20px;
+            font-size: 22px;
             color: #003c63;
         }
 
@@ -178,7 +162,7 @@
             color: white;
         }
 
-        /* تحسين تجربة الأجهزة المحمولة */
+        /* تحسين التنسيق على الأجهزة المحمولة */
         @media (max-width: 768px) {
             header .logo {
                 font-size: 32px;
@@ -203,7 +187,7 @@
 
             section {
                 width: 90%;
-                padding: 25px;
+                padding: 20px;
             }
 
             footer {
@@ -211,11 +195,6 @@
             }
         }
     </style>
-    <script>
-        function searchContent() {
-            alert("البحث قيد التنفيذ! يمكن تطوير هذه الوظيفة لتكون أكثر دقة.");
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -295,6 +274,12 @@
     <footer>
         <p>&copy; 2025 جميع الحقوق محفوظة | الموقع الإسلامي</p>
     </footer>
+
+    <script>
+        function searchContent() {
+            alert("البحث قيد التنفيذ! يمكن تطوير هذه الوظيفة لتكون أكثر دقة.");
+        }
+    </script>
 
 </body>
 </html>
