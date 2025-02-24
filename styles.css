@@ -123,24 +123,6 @@ footer {
     background-color: #004d40;
 }
 
-.scrolling-text {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    font-size: 16px;
-    animation: slideLeft 10s linear infinite;
-}
-
-@keyframes slideLeft {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-}
-
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
