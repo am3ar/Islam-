@@ -5,26 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الموقع الإسلامي</title>
     <style>
-        /* إعدادات الخطوط والألوان */
         body {
             font-family: 'Tajawal', sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
             margin: 0;
             padding: 0;
-            background-color: #f4f7fa;
-            color: #444;
             direction: rtl;
             box-sizing: border-box;
         }
 
         header {
-            background: #1a73e8;
+            background-color: #007BFF;
             color: #fff;
             padding: 20px;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
 
         header .logo {
@@ -33,46 +29,36 @@
             letter-spacing: 2px;
         }
 
-        /* التنقل العلوي */
+        /* قائمة التنقل */
         nav {
-            display: none;
+            display: flex;
+            justify-content: center;
+            background-color: #007BFF;
+            border-radius: 10px;
+            padding: 10px;
         }
 
         nav ul {
             list-style: none;
-            padding: 0;
+            display: flex;
             margin: 0;
-            background-color: #1a73e8;
-            position: absolute;
-            top: 70px;
-            left: 0;
-            width: 100%;
-            text-align: center;
-            border-radius: 8px;
+            padding: 0;
         }
 
         nav ul li {
-            margin: 10px 0;
+            margin: 0 15px;
         }
 
         nav ul li a {
-            color: #fff;
+            color: white;
             text-decoration: none;
             font-size: 18px;
-            padding: 15px 0;
-            display: block;
+            font-weight: bold;
+            transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            background-color: #ffcc00;
-            color: #1a73e8;
-        }
-
-        .menu-toggle {
-            display: none;
-            cursor: pointer;
-            font-size: 30px;
-            color: #fff;
+            color: #ffcc00;
         }
 
         .search-bar {
@@ -87,11 +73,12 @@
             font-size: 16px;
             border-radius: 25px;
             border: 2px solid #ccc;
+            margin-right: 10px;
         }
 
         .search-bar button {
             padding: 12px 20px;
-            background-color: #1a73e8;
+            background-color: #007BFF;
             color: white;
             border: none;
             border-radius: 25px;
@@ -101,7 +88,7 @@
 
         .search-bar button:hover {
             background-color: #ffcc00;
-            color: #1a73e8;
+            color: #007BFF;
         }
 
         section {
@@ -115,7 +102,7 @@
         }
 
         section h2 {
-            color: #1a73e8;
+            color: #007BFF;
             font-size: 28px;
             font-weight: 700;
             margin-bottom: 20px;
@@ -130,7 +117,7 @@
         }
 
         footer {
-            background-color: #1a73e8;
+            background-color: #007BFF;
             color: white;
             text-align: center;
             padding: 20px 0;
@@ -143,36 +130,20 @@
             font-size: 14px;
         }
 
-        /* تحسين التنسيق على الأجهزة المحمولة */
+        /* التحسينات للموبايل */
         @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-                text-align: left;
-                padding: 20px;
-            }
-
             nav {
-                display: block;
-                background-color: #1a73e8;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                flex-direction: column;
+                align-items: center;
             }
 
             nav ul {
-                display: block;
-                text-align: right;
+                flex-direction: column;
+                margin-top: 15px;
             }
 
             nav ul li {
-                margin: 15px 0;
-            }
-
-            nav ul li a {
-                font-size: 18px;
-                padding: 12px;
+                margin: 10px 0;
             }
 
             .search-bar input {
@@ -202,17 +173,8 @@
             }
         }
 
-        /* تحسين التوافق على الشاشات الصغيرة */
+        /* التحسينات على الشاشات الصغيرة */
         @media (max-width: 480px) {
-            .menu-toggle {
-                font-size: 25px;
-            }
-
-            nav ul li a {
-                font-size: 16px;
-                padding: 12px;
-            }
-
             section h2 {
                 font-size: 20px;
             }
@@ -232,20 +194,19 @@
     <!-- العنوان الرئيسي -->
     <header>
         <div class="logo">📖 الموقع الإسلامي</div>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <nav>
-            <ul>
-                <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#fatwas">الفتاوى</a></li>
-                <li><a href="#articles">المقالات</a></li>
-                <li><a href="#books">الكتب</a></li>
-                <li><a href="#about">عن الموقع</a></li>
-                <li><a href="#privacy">سياسة الخصوصية</a></li>
-                <li><a href="#terms">الشروط والأحكام</a></li>
-                <li><a href="#contact">اتصل بنا</a></li>
-            </ul>
-        </nav>
     </header>
+
+    <!-- قائمة التنقل -->
+    <nav>
+        <ul>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#fatwas">الفتاوى</a></li>
+            <li><a href="#articles">المقالات</a></li>
+            <li><a href="#books">الكتب</a></li>
+            <li><a href="#about">عن الموقع</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+    </nav>
 
     <!-- شريط البحث -->
     <div class="search-bar">
@@ -279,16 +240,6 @@
         <p>الموقع الإسلامي هو منصة دينية تهدف إلى نشر المعرفة الإسلامية من خلال الفتاوى، المقالات، والكتب.</p>
     </section>
 
-    <section id="privacy">
-        <h2>سياسة الخصوصية</h2>
-        <p>نولي خصوصيتك اهتمامًا كبيرًا. نحن نؤمن بحقك في الخصوصية.</p>
-    </section>
-
-    <section id="terms">
-        <h2>الشروط والأحكام</h2>
-        <p>استخدامك للموقع يعني أنك توافق على الشروط والأحكام الخاصة بنا.</p>
-    </section>
-
     <section id="contact">
         <h2>اتصل بنا</h2>
         <form>
@@ -311,11 +262,6 @@
     </footer>
 
     <script>
-        function toggleMenu() {
-            var nav = document.querySelector('nav');
-            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
-        }
-
         function searchContent() {
             alert("البحث قيد التنفيذ! يمكن تطوير هذه الوظيفة لتكون أكثر دقة.");
         }
