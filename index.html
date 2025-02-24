@@ -19,7 +19,7 @@
         header {
             background: #1a73e8;
             color: #fff;
-            padding: 20px 0;
+            padding: 20px;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             position: sticky;
@@ -31,41 +31,50 @@
             font-size: 36px;
             font-weight: bold;
             letter-spacing: 2px;
-            color: #fff;
         }
 
         /* التنقل العلوي */
+        nav {
+            display: none;
+        }
+
         nav ul {
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            margin: 10px 0;
             list-style: none;
+            padding: 0;
+            margin: 0;
             background-color: #1a73e8;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            text-align: center;
             border-radius: 8px;
-            overflow: hidden;
         }
 
         nav ul li {
-            margin: 0;
+            margin: 10px 0;
         }
 
         nav ul li a {
             color: #fff;
             text-decoration: none;
             font-size: 18px;
-            padding: 15px 25px;
+            padding: 15px 0;
             display: block;
-            transition: background-color 0.3s ease;
         }
 
         nav ul li a:hover {
             background-color: #ffcc00;
             color: #1a73e8;
-            border-radius: 8px;
         }
 
-        /* الشريط العلوي للبحث */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 30px;
+            color: #fff;
+        }
+
         .search-bar {
             text-align: center;
             margin: 40px 0;
@@ -95,7 +104,6 @@
             color: #1a73e8;
         }
 
-        /* أقسام الموقع */
         section {
             background: #fff;
             border-radius: 10px;
@@ -121,30 +129,6 @@
             text-align: justify;
         }
 
-        /* إضافة شريط تمرير للمحتوى */
-        .carousel {
-            display: flex;
-            overflow-x: auto;
-            padding: 10px 0;
-            justify-content: space-between;
-        }
-
-        .carousel div {
-            flex: 0 0 30%;
-            background: #f4f7fa;
-            margin: 10px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .carousel div:hover {
-            transform: scale(1.05);
-        }
-
-        /* التذييل */
         footer {
             background-color: #1a73e8;
             color: white;
@@ -161,17 +145,34 @@
 
         /* تحسين التنسيق على الأجهزة المحمولة */
         @media (max-width: 768px) {
-            header .logo {
-                font-size: 30px;
+            .menu-toggle {
+                display: block;
+                text-align: left;
+                padding: 20px;
+            }
+
+            nav {
+                display: block;
+                background-color: #1a73e8;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             }
 
             nav ul {
-                flex-direction: column;
-                border-radius: 0;
+                display: block;
+                text-align: right;
             }
 
             nav ul li {
-                margin: 10px 0;
+                margin: 15px 0;
+            }
+
+            nav ul li a {
+                font-size: 18px;
+                padding: 12px;
             }
 
             .search-bar input {
@@ -191,11 +192,6 @@
                 font-size: 12px;
             }
 
-            .carousel div {
-                flex: 0 0 80%;
-            }
-
-            /* جعل النصوص أكثر تناسقًا */
             section h2 {
                 font-size: 22px;
             }
@@ -208,27 +204,13 @@
 
         /* تحسين التوافق على الشاشات الصغيرة */
         @media (max-width: 480px) {
-            header .logo {
-                font-size: 28px;
-            }
-
-            nav ul {
-                flex-direction: column;
+            .menu-toggle {
+                font-size: 25px;
             }
 
             nav ul li a {
                 font-size: 16px;
-                padding: 12px 20px;
-            }
-
-            .search-bar input {
-                width: 85%;
-                padding: 10px;
-            }
-
-            .search-bar button {
-                width: 85%;
-                padding: 10px 15px;
+                padding: 12px;
             }
 
             section h2 {
@@ -237,11 +219,10 @@
 
             section p {
                 font-size: 14px;
-                text-align: justify;
             }
 
-            .carousel div {
-                flex: 0 0 100%;
+            footer {
+                font-size: 10px;
             }
         }
     </style>
@@ -251,6 +232,7 @@
     <!-- العنوان الرئيسي -->
     <header>
         <div class="logo">📖 الموقع الإسلامي</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <nav>
             <ul>
                 <li><a href="#home">الرئيسية</a></li>
@@ -279,58 +261,32 @@
 
     <section id="fatwas">
         <h2>الفتاوى</h2>
-        <div class="carousel">
-            <div>
-                <h3>الفتوى 1</h3>
-                <p>نبذة عن الفتوى الأولى...</p>
-            </div>
-            <div>
-                <h3>الفتوى 2</h3>
-                <p>نبذة عن الفتوى الثانية...</p>
-            </div>
-            <div>
-                <h3>الفتوى 3</h3>
-                <p>نبذة عن الفتوى الثالثة...</p>
-            </div>
-        </div>
+        <p>مجموعة من الفتاوى الشرعية الموثوقة.</p>
     </section>
 
     <section id="articles">
         <h2>المقالات</h2>
-        <div class="carousel">
-            <div>
-                <h3>مقال 1</h3>
-                <p>مقال عن موضوع إسلامي مهم...</p>
-            </div>
-            <div>
-                <h3>مقال 2</h3>
-                <p>مقال آخر عن موضوع حديث...</p>
-            </div>
-            <div>
-                <h3>مقال 3</h3>
-                <p>مقال عن جوانب دينية مهمة...</p>
-            </div>
-        </div>
+        <p>مقالات إسلامية متنوعة لزيادة المعرفة.</p>
     </section>
 
     <section id="books">
         <h2>الكتب الإسلامية</h2>
-        <p>تحميل وقراءة الكتب الإسلامية مجانًا. اختر من بين مجموعة متنوعة من الكتب.</p>
+        <p>تحميل وقراءة الكتب الإسلامية مجانًا.</p>
     </section>
 
     <section id="about">
         <h2>عن الموقع</h2>
-        <p>الموقع الإسلامي هو منصة دينية تهدف إلى نشر المعرفة الإسلامية من خلال الفتاوى، المقالات، والكتب. نعمل على توفير محتوى موثوق وشامل للمهتمين بالثقافة الإسلامية.</p>
+        <p>الموقع الإسلامي هو منصة دينية تهدف إلى نشر المعرفة الإسلامية من خلال الفتاوى، المقالات، والكتب.</p>
     </section>
 
     <section id="privacy">
         <h2>سياسة الخصوصية</h2>
-        <p>نحن نولي خصوصيتك اهتمامًا كبيرًا. ستظل جميع البيانات الشخصية التي تشاركها معنا سرية ولن يتم استخدامها لأي غرض آخر سوى تحسين تجربتك على الموقع.</p>
+        <p>نولي خصوصيتك اهتمامًا كبيرًا. نحن نؤمن بحقك في الخصوصية.</p>
     </section>
 
     <section id="terms">
         <h2>الشروط والأحكام</h2>
-        <p>استخدامك للموقع يعني أنك توافق على الشروط والأحكام الخاصة بنا. يجب عليك الالتزام بجميع السياسات التي تم وضعها من أجل ضمان استخدامك الآمن والشرعي للموقع.</p>
+        <p>استخدامك للموقع يعني أنك توافق على الشروط والأحكام الخاصة بنا.</p>
     </section>
 
     <section id="contact">
@@ -345,7 +301,7 @@
             <label for="message">الرسالة:</label>
             <textarea id="message" name="message" required></textarea>
 
-            <button type="submit" class="button">إرسال</button>
+            <button type="submit">إرسال</button>
         </form>
     </section>
 
@@ -355,6 +311,11 @@
     </footer>
 
     <script>
+        function toggleMenu() {
+            var nav = document.querySelector('nav');
+            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+        }
+
         function searchContent() {
             alert("البحث قيد التنفيذ! يمكن تطوير هذه الوظيفة لتكون أكثر دقة.");
         }
