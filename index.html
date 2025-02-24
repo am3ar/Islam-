@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الموقع الإسلامي - شبيه إسلام ويب</title>
+    <title>الموقع الإسلامي - إسلام ويب</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- رأس الصفحة -->
     <header>
         <div class="logo">📖 الموقع الإسلامي</div>
         <nav class="navbar">
@@ -23,11 +24,13 @@
         </nav>
     </header>
 
+    <!-- شريط البحث -->
     <div class="search-bar">
         <input type="text" id="searchInput" placeholder="ابحث في الموقع...">
         <button onclick="searchContent()">🔍</button>
     </div>
 
+    <!-- الأقسام الرئيسية -->
     <section id="home" class="section fade-in">
         <h2>مرحبا بكم في الموقع الإسلامي</h2>
         <p>قال الله تعالى: "إِنَّ هَذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ" (الإسراء: 9)</p>
@@ -51,28 +54,32 @@
         <a href="#" class="cta-button">تحميل الكتب</a>
     </section>
 
+    <!-- نموذج الاتصال -->
     <section id="contact" class="section fade-in">
         <h2>اتصل بنا</h2>
         <form>
             <label for="name">الاسم:</label>
             <input type="text" id="name" name="name" required>
-
+            
             <label for="email">البريد الإلكتروني:</label>
             <input type="email" id="email" name="email" required>
-
+            
             <label for="message">الرسالة:</label>
             <textarea id="message" name="message" required></textarea>
-
+            
             <button type="submit">إرسال</button>
         </form>
     </section>
 
+    <!-- تذييل الصفحة -->
     <footer>
         <p>&copy; 2025 جميع الحقوق محفوظة | الموقع الإسلامي</p>
     </footer>
 
+    <!-- النص المتحرك في الأسفل -->
     <div id="scrolling-text" class="scrolling-text">
         <p>🌙 آية اليوم: "إِنَّ هَذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ"</p>
     </div>
+
 </body>
 </html>
