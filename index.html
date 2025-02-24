@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الموقع الإسلامي - شبيه ابن باز</title>
     <style>
-        /* إعادة ترتيب القالب */
+        /* تحسين UX وUI */
         body {
             font-family: 'Tajawal', sans-serif;
-            background-color: #f4f4f9;
+            background-color: #f4f7fa;
+            color: #444;
             margin: 0;
             padding: 0;
             direction: rtl;
@@ -16,121 +17,123 @@
         }
 
         header {
-            background: linear-gradient(135deg, #003b5c, #005c87);
-            color: #fff;
+            background: #004b87;
+            color: white;
             text-align: center;
-            padding: 30px 0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         header .logo {
             font-size: 40px;
             font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
         }
 
         nav ul {
-            list-style: none;
-            padding: 0;
             display: flex;
             justify-content: center;
-            margin-top: 20px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            background-color: #003c63;
         }
 
         nav ul li {
-            margin: 0 25px;
+            margin: 0 15px;
         }
 
         nav ul li a {
+            color: #fff;
             text-decoration: none;
-            color: white;
             font-size: 18px;
             font-weight: 600;
-            padding: 10px 20px;
-            transition: all 0.3s ease;
+            padding: 15px;
+            display: block;
+            transition: background-color 0.3s ease;
         }
 
         nav ul li a:hover {
             background-color: #ffcc00;
-            color: #003b5c;
-            border-radius: 25px;
+            color: #003c63;
+            border-radius: 10px;
         }
 
         .search-bar {
-            margin: 40px auto;
             text-align: center;
+            margin-top: 30px;
         }
 
         .search-bar input {
-            width: 75%;
-            max-width: 500px;
+            width: 80%;
+            max-width: 600px;
             padding: 15px;
-            font-size: 18px;
-            border: 2px solid #ddd;
+            font-size: 16px;
             border-radius: 30px;
-            transition: all 0.3s ease;
+            border: 2px solid #ccc;
+            transition: border-color 0.3s ease;
         }
 
         .search-bar input:focus {
+            border-color: #003c63;
             outline: none;
-            border-color: #005c87;
         }
 
         .search-bar button {
             padding: 15px 25px;
-            font-size: 18px;
+            font-size: 16px;
+            background-color: #003c63;
             color: white;
-            background-color: #003b5c;
             border: none;
             border-radius: 30px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease;
         }
 
         .search-bar button:hover {
             background-color: #ffcc00;
-            color: #003b5c;
+            color: #003c63;
         }
 
         section {
             background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            margin: 40px auto;
-            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin: 30px auto;
+            padding: 30px;
             width: 80%;
             max-width: 1100px;
         }
 
         section h2 {
-            color: #003b5c;
-            font-size: 30px;
+            color: #003c63;
+            font-size: 28px;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         section p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #555;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #666;
             text-align: justify;
         }
 
         footer {
-            background-color: #003b5c;
+            background-color: #003c63;
             color: white;
             text-align: center;
-            padding: 30px 0;
-            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
         }
 
         footer p {
             margin: 0;
+            font-size: 14px;
         }
 
+        /* تحسين تنسيق النماذج */
         form input, form textarea {
             width: 100%;
             padding: 15px;
@@ -139,27 +142,34 @@
             border: 1px solid #ddd;
             font-size: 16px;
             color: #333;
+            transition: border-color 0.3s ease;
+        }
+
+        form input:focus, form textarea:focus {
+            border-color: #003c63;
+            outline: none;
         }
 
         form button {
             padding: 15px 30px;
-            background-color: #003b5c;
+            background-color: #003c63;
             color: white;
             border: none;
             border-radius: 25px;
             font-size: 18px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease;
         }
 
         form button:hover {
             background-color: #ffcc00;
-            color: #003b5c;
+            color: #003c63;
         }
 
+        /* تحسين تجربة الأجهزة المحمولة */
         @media (max-width: 768px) {
             header .logo {
-                font-size: 30px;
+                font-size: 32px;
             }
 
             nav ul {
@@ -167,24 +177,24 @@
             }
 
             nav ul li {
-                margin-bottom: 15px;
+                margin: 10px 0;
             }
 
             .search-bar input {
-                width: 85%;
+                width: 90%;
             }
 
             .search-bar button {
-                width: 85%;
+                width: 90%;
             }
 
             section {
                 width: 90%;
-                padding: 30px;
+                padding: 20px;
             }
 
             footer {
-                font-size: 14px;
+                font-size: 12px;
             }
         }
     </style>
@@ -215,17 +225,17 @@
 
     <section id="fatwas">
         <h2>الفتاوى</h2>
-        <p>مجموعة من الفتاوى الشرعية الموثوقة التي تساهم في إثراء معرفتك بالدين الإسلامي.</p>
+        <p>مجموعة من الفتاوى الشرعية الموثوقة.</p>
     </section>
 
     <section id="articles">
         <h2>المقالات</h2>
-        <p>مقالات إسلامية قيمة لتوسيع الفهم وزيادة المعرفة حول الموضوعات الدينية.</p>
+        <p>مقالات إسلامية متنوعة لزيادة المعرفة.</p>
     </section>
 
     <section id="books">
         <h2>الكتب الإسلامية</h2>
-        <p>تحميل الكتب الإسلامية القيمة والمهمة في مجالات متنوعة.</p>
+        <p>تحميل وقراءة الكتب الإسلامية مجانًا.</p>
     </section>
 
     <section id="contact">
