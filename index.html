@@ -13,6 +13,13 @@
             padding: 0;
             direction: rtl;
             box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        /* الوضع الداكن والفاتح */
+        body.dark-mode {
+            background-color: #2c3e50;
+            color: #ecf0f1;
         }
 
         header {
@@ -61,6 +68,7 @@
             color: #f39c12;
         }
 
+        /* شريط البحث */
         .search-bar {
             text-align: center;
             margin: 40px 0;
@@ -97,6 +105,25 @@
             color: #f39c12;
         }
 
+        /* شريط الآيات */
+        .ayat-bar {
+            background-color: #f39c12;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            text-align: center;
+            animation: scroll 20s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
         section {
             background: #fff;
             border-radius: 10px;
@@ -105,6 +132,7 @@
             width: 80%;
             max-width: 1100px;
             box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
 
         section h2 {
@@ -134,6 +162,16 @@
         footer p {
             margin: 0;
             font-size: 14px;
+        }
+
+        .footer-links {
+            margin-top: 15px;
+        }
+
+        .footer-links a {
+            color: #f39c12;
+            text-decoration: none;
+            margin: 0 10px;
         }
 
         /* التحسينات للموبايل */
@@ -193,9 +231,35 @@
                 font-size: 10px;
             }
         }
+
+        .toggle-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 9999;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-btn:hover {
+            background-color: #34495e;
+        }
     </style>
 </head>
 <body>
+
+    <!-- زر تغيير الوضع -->
+    <button class="toggle-btn" onclick="toggleDarkMode()">تبديل الوضع</button>
+
+    <!-- شريط الآيات -->
+    <div class="ayat-bar">
+        <p>قال الله تعالى: "إِنَّ هَذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ" (الإسراء: 9)</p>
+    </div>
 
     <!-- العنوان الرئيسي -->
     <header>
@@ -265,9 +329,17 @@
     <!-- التذييل -->
     <footer>
         <p>&copy; 2025 جميع الحقوق محفوظة | الموقع الإسلامي</p>
+        <div class="footer-links">
+            <a href="#">سياسة الخصوصية</a>
+            <a href="#">الشروط والأحكام</a>
+        </div>
     </footer>
 
     <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
         function searchContent() {
             alert("البحث قيد التنفيذ! يمكن تطوير هذه الوظيفة لتكون أكثر دقة.");
         }
