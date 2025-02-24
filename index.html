@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الموقع الإسلامي</title>
     <style>
+        /* إعدادات الخطوط والألوان */
         body {
             font-family: 'Tajawal', sans-serif;
             margin: 0;
             padding: 0;
-            direction: rtl;
             background-color: #f4f7fa;
             color: #444;
+            direction: rtl;
             box-sizing: border-box;
         }
 
@@ -30,6 +31,7 @@
             color: #ffcc00;
         }
 
+        /* التنقل العلوي */
         nav ul {
             display: flex;
             justify-content: center;
@@ -60,6 +62,7 @@
             border-radius: 8px;
         }
 
+        /* الشريط العلوي للبحث */
         .search-bar {
             text-align: center;
             margin: 40px 0;
@@ -89,6 +92,7 @@
             color: #003c63;
         }
 
+        /* أقسام الموقع */
         section {
             background: #fff;
             border-radius: 10px;
@@ -163,6 +167,8 @@
     </style>
 </head>
 <body>
+
+    <!-- العنوان الرئيسي -->
     <header>
         <div class="logo">📖 الموقع الإسلامي</div>
         <nav>
@@ -179,11 +185,13 @@
         </nav>
     </header>
 
+    <!-- شريط البحث -->
     <div class="search-bar">
         <input type="text" id="searchInput" placeholder="ابحث في الموقع...">
         <button onclick="searchContent()">🔍</button>
     </div>
 
+    <!-- الأقسام الرئيسية للموقع -->
     <section id="home">
         <h2>مرحبًا بكم في الموقع الإسلامي</h2>
         <p>قال الله تعالى: "إِنَّ هَذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ" (الإسراء: 9)</p>
@@ -235,6 +243,7 @@
         </form>
     </section>
 
+    <!-- التذييل -->
     <footer>
         <p>&copy; 2025 جميع الحقوق محفوظة | الموقع الإسلامي</p>
     </footer>
