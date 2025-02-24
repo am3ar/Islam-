@@ -7,106 +7,160 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <style>
+        /* تحسين التصميم العام */
         body {
             font-family: 'Tajawal', sans-serif;
-            background: #f9f9f9;
+            background: #f0f4f8;
             color: #333;
             margin: 0;
             padding: 0;
             direction: rtl;
+            box-sizing: border-box;
         }
+        
+        /* تحسين التصميم العلوي */
         header {
-            background: #004b87;
+            background: linear-gradient(135deg, #004b87, #0069c0);
             color: white;
-            padding: 15px;
+            padding: 20px 10px;
             text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+
         .logo {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
+            margin-bottom: 10px;
         }
+
         nav ul {
             list-style: none;
             padding: 0;
             display: flex;
             justify-content: center;
+            margin: 0;
         }
+
         nav ul li {
-            margin: 0 15px;
+            margin: 0 20px;
         }
+
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 500;
+            font-size: 18px;
+            transition: color 0.3s;
         }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        /* تحسين شريط البحث */
         .search-bar {
             text-align: center;
-            margin: 20px;
+            margin: 30px 0;
         }
+
         .search-bar input {
-            padding: 10px;
-            width: 300px;
+            padding: 12px;
+            width: 320px;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 25px;
+            font-size: 16px;
+            margin-right: 10px;
+            transition: all 0.3s;
         }
+
+        .search-bar input:focus {
+            border-color: #0069c0;
+            outline: none;
+        }
+
         .search-bar button {
-            padding: 10px;
+            padding: 12px 20px;
             background: #004b87;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 25px;
             cursor: pointer;
-        }
-        section {
-            padding: 20px;
-            background: white;
-            margin: 10px auto;
-            width: 80%;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #004b87;
-            color: white;
-        }
-        footer p {
-            margin: 0;
-        }
-        .section-heading {
-            font-size: 24px;
-            color: #004b87;
-            border-bottom: 2px solid #004b87;
-            padding-bottom: 5px;
-        }
-        .section-content {
-            margin-top: 15px;
             font-size: 16px;
-            color: #666;
+            transition: background 0.3s;
         }
+
+        .search-bar button:hover {
+            background: #003b6f;
+        }
+
+        /* تحسين الأقسام */
+        section {
+            padding: 30px;
+            background: white;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        section h2 {
+            color: #004b87;
+            font-size: 28px;
+            border-bottom: 3px solid #004b87;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* تحسين نموذج الاتصال */
         form label {
             display: block;
-            margin: 10px 0 5px;
+            margin: 12px 0 5px;
             font-weight: bold;
+            font-size: 16px;
         }
+
         form input, form textarea {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
+            padding: 12px;
+            border-radius: 8px;
             border: 1px solid #ccc;
+            font-size: 16px;
+            margin-bottom: 20px;
         }
+
         form button {
-            padding: 10px 15px;
+            padding: 12px 25px;
             background: #004b87;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 25px;
+            font-size: 18px;
             cursor: pointer;
+            transition: background 0.3s;
         }
+
         form button:hover {
             background: #003b6f;
+        }
+
+        /* تحسين التذييل */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #004b87;
+            color: white;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -130,27 +184,27 @@
     </div>
 
     <section id="home">
-        <h2 class="section-heading">مرحبا بكم في الموقع الإسلامي</h2>
-        <p class="section-content">قال الله تعالى: "إِنَّ هَذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ" (الإسراء: 9)</p>
+        <h2>مرحبا بكم في الموقع الإسلامي</h2>
+        <p>قال الله تعالى: "إِنَّ هَذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ" (الإسراء: 9)</p>
     </section>
 
     <section id="fatwas">
-        <h2 class="section-heading">الفتاوى</h2>
-        <p class="section-content">مجموعة من الفتاوى الشرعية الموثوقة.</p>
+        <h2>الفتاوى</h2>
+        <p>مجموعة من الفتاوى الشرعية الموثوقة.</p>
     </section>
 
     <section id="articles">
-        <h2 class="section-heading">المقالات</h2>
-        <p class="section-content">مقالات إسلامية متنوعة لزيادة المعرفة.</p>
+        <h2>المقالات</h2>
+        <p>مقالات إسلامية متنوعة لزيادة المعرفة.</p>
     </section>
 
     <section id="books">
-        <h2 class="section-heading">الكتب الإسلامية</h2>
-        <p class="section-content">تحميل وقراءة الكتب الإسلامية مجانًا.</p>
+        <h2>الكتب الإسلامية</h2>
+        <p>تحميل وقراءة الكتب الإسلامية مجانًا.</p>
     </section>
 
     <section id="contact">
-        <h2 class="section-heading">اتصل بنا</h2>
+        <h2>اتصل بنا</h2>
         <form>
             <label for="name">الاسم:</label>
             <input type="text" id="name" name="name" required>
@@ -168,5 +222,6 @@
     <footer>
         <p>&copy; 2025 جميع الحقوق محفوظة | الموقع الإسلامي</p>
     </footer>
+
 </body>
 </html>
