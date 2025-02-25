@@ -1,53 +1,98 @@
+/* تحسين عام */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Amiri', serif; /* خط عربي أنيق */
     direction: rtl;
     text-align: right;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
     color: #333;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 header {
     background-color: #2c3e50;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1abc9c;
 }
 
 main {
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 footer {
     background-color: #2c3e50;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
+    padding: 15px 0;
+    position: relative;
     width: 100%;
-    bottom: 0;
+    margin-top: 40px;
 }
 
+/* تحسين العناصر */
 .verse, .hadith {
     background-color: #fff;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.verse:hover, .hadith:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.verse p, .hadith p {
+    margin: 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.verse strong, .hadith strong {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* تأثيرات إضافية */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+main {
+    animation: fadeIn 1s ease-in-out;
 }
