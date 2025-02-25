@@ -1,99 +1,173 @@
-/* إعدادات عامة */
+/* Reset Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Amiri', serif;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
 }
 
-/* الشريط العلوي (Header) */
+/* Header Styling */
 header {
-    background-color: #333;
+    background-color: #004d40;
     color: white;
-    padding: 10px 0;
-    text-align: center;
+    padding: 20px 0;
 }
 
-header .logo h1 {
-    font-size: 2em;
+header .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav ul {
+header h1 {
+    font-size: 24px;
+}
+
+header nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    margin-top: 10px;
 }
 
-nav ul li {
-    margin: 0 15px;
+header nav ul li {
+    margin: 0 20px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 18px;
+    padding: 5px;
+    transition: background-color 0.3s;
 }
 
-/* الأقسام الرئيسية */
-main {
-    padding: 20px;
+header nav ul li a:hover {
+    background-color: #00897b;
+    border-radius: 5px;
 }
 
-h2 {
+/* Welcome Section */
+.welcome {
+    background-color: #e0f2f1;
+    padding: 60px 0;
     text-align: center;
+}
+
+.welcome h2 {
+    font-size: 36px;
     margin-bottom: 20px;
 }
 
-.intro {
-    background-color: #fff;
-    padding: 30px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-}
-
+/* Articles Section */
 .articles {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.articles h2 {
+    text-align: center;
+    font-size: 30px;
     margin-bottom: 40px;
 }
 
-.article {
-    background-color: #fff;
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.gallery {
+.article-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.image {
-    margin: 10px;
-    width: 250px;
-    height: 200px;
-    overflow: hidden;
+.article-item {
+    background-color: #e0f7fa;
+    border: 1px solid #004d40;
+    padding: 20px;
+    width: 30%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s;
 }
 
-.image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.article-item:hover {
+    transform: translateY(-10px);
 }
 
-/* القسم السفلي (Footer) */
+.article-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Subscription Section */
+.footer-info {
+    background-color: #004d40;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-info .subscription-form {
+    margin-top: 20px;
+}
+
+.footer-info .subscription-form input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-info .subscription-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00897b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-info .subscription-form button:hover {
+    background-color: #004d40;
+}
+
+/* Footer Styling */
 footer {
-    background-color: #333;
+    background-color: #004d40;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .article-list {
+        flex-direction: column;
+    }
+
+    .article-item {
+        width: 100%;
+    }
 }
