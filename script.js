@@ -1,4 +1,8 @@
-// يمكنك إضافة تفاعلات بسيطة باستخدام JavaScript
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('الموقع جاهز!');
-});
+    const verses = document.querySelectorAll('.verse');
+    verses.forEach(verse => {
+        verse.addEventListener('click', () => {
+            verse.classList.toggle('active');
+        });
+    });
+}); 
