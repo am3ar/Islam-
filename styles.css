@@ -1,19 +1,19 @@
-/* Reset Styles */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
     font-family: 'Amiri', serif;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    direction: rtl;
 }
 
-/* Header Styling */
+/* Header */
 header {
     position: sticky;
     top: 0;
@@ -21,10 +21,11 @@ header {
     background-color: #004d40;
     color: white;
     padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -32,7 +33,7 @@ header .container {
 }
 
 header h1 {
-    font-size: 24px;
+    font-size: 26px;
 }
 
 header nav ul {
@@ -48,7 +49,7 @@ header nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    padding: 5px;
+    padding: 10px;
     transition: background-color 0.3s;
 }
 
@@ -57,28 +58,44 @@ header nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Welcome Section */
-.welcome {
+/* Hero Section */
+.hero {
     background-color: #e0f2f1;
-    padding: 60px 0;
+    padding: 100px 0;
     text-align: center;
 }
 
-.welcome h2 {
-    font-size: 36px;
+.hero h2 {
+    font-size: 38px;
     margin-bottom: 20px;
+    color: #004d40;
+}
+
+.hero .cta-button {
+    background-color: #004d40;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.hero .cta-button:hover {
+    background-color: #00897b;
 }
 
 /* Articles Section */
 .articles {
-    padding: 60px 0;
     background-color: #ffffff;
+    padding: 60px 0;
 }
 
 .articles h2 {
     text-align: center;
     font-size: 30px;
     margin-bottom: 40px;
+    color: #004d40;
 }
 
 .article-list {
@@ -105,23 +122,20 @@ header nav ul li a:hover {
     transform: translateY(0);
 }
 
-.article-item:hover {
-    transform: translateY(-10px);
-}
-
 .article-item h3 {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-/* Fatwas Section */
+/* Search Feature for Fatwas */
 .fatwas input[type="text"] {
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 20px;
-    border: 1px solid #004d40;
+    padding: 12px;
+    font-size: 18px;
     border-radius: 5px;
+    border: 1px solid #004d40;
+    margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 .fatwa-list {
@@ -137,7 +151,65 @@ header nav ul li a:hover {
     margin-bottom: 15px;
 }
 
-/* Social Media Section */
+/* Lessons Section */
+.lessons {
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+.lesson-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.lesson-item {
+    width: 45%;
+}
+
+.lesson-item video,
+.lesson-item audio {
+    width: 100%;
+}
+
+/* Footer Subscription */
+.footer-info {
+    background-color: #004d40;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.footer-info h2 {
+    font-size: 30px;
+}
+
+.footer-info .subscription-form {
+    margin-top: 20px;
+}
+
+.footer-info input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.footer-info button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00897b;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-info button:hover {
+    background-color: #004d40;
+}
+
+/* Social Media Icons */
 .social-media {
     background-color: #004d40;
     color: white;
@@ -154,12 +226,3 @@ header nav ul li a:hover {
     width: 40px;
     height: 40px;
 }
-
-/* Comments Section */
-.comments {
-    background-color: #ffffff;
-    padding: 40px 0;
-}
-
-.comments form {
-    margin-bottom: 30
