@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع إسلامي فخم</title>
+    <title>موقع إسلامي متكامل</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="container">
-            <h1>موقع إسلامي</h1>
+            <h1>موقع إسلامي متكامل</h1>
             <nav>
                 <ul>
                     <li><a href="#">الصفحة الرئيسية</a></li>
@@ -23,13 +24,14 @@
         </div>
     </header>
 
+    <!-- Main Content -->
     <main>
-        <!-- Hero Section (Landing Page) -->
+        <!-- Hero Section -->
         <section class="hero">
             <div class="container">
                 <h2>مرحبًا بكم في موقعنا الإسلامي</h2>
-                <p>نحن نقدم محتوى إسلامي ديني شامل وموثوق لتعزيز الوعي الديني والتثقيف العام.</p>
-                <a href="#articles" class="cta-button">قراءة المقالات</a>
+                <p>موقع يهدف إلى نشر المحتوى الإسلامي الموثوق والمفيد.</p>
+                <a href="#articles" class="cta-button">اكتشف المقالات</a>
             </div>
         </section>
 
@@ -39,56 +41,17 @@
                 <h2>أحدث المقالات</h2>
                 <div class="article-list">
                     <article class="article-item">
-                        <h3>مقال 1: أهمية الصلاة في الإسلام</h3>
-                        <p>الصلاة ركن من أركان الإسلام، وهي من أعظم العبادات التي تقرب العبد إلى ربه.</p>
+                        <h3>أهمية الصلاة في الإسلام</h3>
+                        <p>الصلاة هي عماد الدين وأحد أركان الإسلام...</p>
                     </article>
                     <article class="article-item">
-                        <h3>مقال 2: كيف نحافظ على ديننا في العصر الحديث</h3>
-                        <p>في هذا المقال، سنتناول طرق المحافظة على القيم الإسلامية في الحياة اليومية.</p>
+                        <h3>كيف نواجه التحديات الدينية في العصر الحديث؟</h3>
+                        <p>دور الفرد في حماية قيمه الدينية في المجتمع المعاصر...</p>
                     </article>
                     <article class="article-item">
-                        <h3>مقال 3: فتاوى حول الصوم في رمضان</h3>
-                        <p>سنستعرض أهم الفتاوى المتعلقة بالصوم وكيفية أداء العبادة بشكل صحيح.</p>
+                        <h3>الصوم في رمضان: الأحكام والآداب</h3>
+                        <p>معلومات حول كيفية أداء صيام رمضان بالطريقة الصحيحة...</p>
                     </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Fatwas Section with Search -->
-        <section id="fatwas" class="fatwas">
-            <div class="container">
-                <h2>الفتاوى</h2>
-                <input type="text" id="fatwa-search" placeholder="ابحث عن فتوى" onkeyup="searchFatwas()">
-                <div class="fatwa-list" id="fatwa-list">
-                    <article class="fatwa-item">
-                        <h3>فتوى 1: حكم الصلاة في المسجد</h3>
-                        <p>تعرف على حكم الصلاة في المسجد بالنسبة للمسافر...</p>
-                    </article>
-                    <article class="fatwa-item">
-                        <h3>فتوى 2: حكم الزكاة على المال المدخر</h3>
-                        <p>ما هو حكم الزكاة على المال المدخر وما شروط إخراجها؟...</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Lessons Section -->
-        <section id="lessons" class="lessons">
-            <div class="container">
-                <h2>الدروس الصوتية والمرئية</h2>
-                <div class="lesson-list">
-                    <div class="lesson-item">
-                        <video controls>
-                            <source src="video.mp4" type="video/mp4">
-                        </video>
-                        <h3>درس 1: فهم أصول الفقه</h3>
-                    </div>
-                    <div class="lesson-item">
-                        <audio controls>
-                            <source src="audio.mp3" type="audio/mp3">
-                        </audio>
-                        <h3>درس 2: شرح الأحاديث النبوية</h3>
-                    </div>
                 </div>
             </div>
         </section>
@@ -96,7 +59,7 @@
         <!-- Social Media Section -->
         <section class="social-media">
             <div class="container">
-                <h2>تابعنا على</h2>
+                <h2>تابعنا على وسائل التواصل الاجتماعي</h2>
                 <div class="social-icons">
                     <a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="فيسبوك"></a>
                     <a href="https://twitter.com" target="_blank"><img src="twitter-icon.png" alt="تويتر"></a>
@@ -104,39 +67,9 @@
                 </div>
             </div>
         </section>
-
-        <!-- Comments Section -->
-        <section class="comments">
-            <div class="container">
-                <h2>التعليقات</h2>
-                <form action="#" method="post">
-                    <textarea name="comment" rows="4" placeholder="اكتب تعليقك هنا..." required></textarea>
-                    <button type="submit">إرسال</button>
-                </form>
-                <div class="comments-list">
-                    <div class="comment-item">
-                        <p><strong>أحمد:</strong> مقال رائع، جزاكم الله خيرًا.</p>
-                    </div>
-                    <div class="comment-item">
-                        <p><strong>سارة:</strong> موضوع مهم جدًا، شكراً على هذه المقالات.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Subscription Section -->
-        <section class="footer-info">
-            <div class="container">
-                <h2>انضم إلينا</h2>
-                <p>اشترك في نشرتنا الإخبارية للحصول على أحدث المقالات والفتاوى.</p>
-                <form action="#" method="post" class="subscription-form">
-                    <input type="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
-                    <button type="submit">اشترك</button>
-                </form>
-            </div>
-        </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2025 موقع إسلامي. جميع الحقوق محفوظة.</p>
