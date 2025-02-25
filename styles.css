@@ -1,53 +1,34 @@
-body {
-    font-family: 'Tajawal', sans-serif;
-    background: var(--bg-color);
-    color: var(--text-color);
+/* إعدادات عامة */
+* {
     margin: 0;
     padding: 0;
-    direction: rtl;
-    transition: all 0.3s ease;
+    box-sizing: border-box;
 }
 
-:root {
-    --primary-color: #004b87;
-    --secondary-color: #f9f9f9;
-    --text-color: #333;
-    --bg-color: #ffffff;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
-.dark-mode {
-    --primary-color: #222;
-    --secondary-color: #333;
-    --text-color: #fff;
-    --bg-color: #121212;
-}
-
+/* الشريط العلوي (Header) */
 header {
-    background: var(--primary-color);
+    background-color: #333;
     color: white;
-    padding: 15px;
+    padding: 10px 0;
     text-align: center;
 }
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#theme-toggle {
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
+header .logo h1 {
+    font-size: 2em;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
+    margin-top: 10px;
 }
 
 nav ul li {
@@ -57,57 +38,62 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    font-size: 1.1em;
 }
 
-nav ul li a:hover {
-    color: #ffd700;
-}
-
-.search-bar {
-    text-align: center;
-    margin: 20px;
-}
-
-.search-bar input {
-    padding: 10px;
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.search-bar button {
-    padding: 10px;
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-section {
+/* الأقسام الرئيسية */
+main {
     padding: 20px;
-    background: var(--secondary-color);
-    margin: 10px auto;
-    width: 80%;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
 }
 
-section:hover {
-    transform: scale(1.02);
-}
-
-footer {
+h2 {
     text-align: center;
-    padding: 15px;
-    background: var(--primary-color);
-    color: white;
+    margin-bottom: 20px;
 }
 
-.ayah {
-    font-weight: bold;
-    color: #009688;
+.intro {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.articles {
+    margin-bottom: 40px;
+}
+
+.article {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.image {
+    margin: 10px;
+    width: 250px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* القسم السفلي (Footer) */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
 }
