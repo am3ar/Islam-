@@ -16,6 +16,7 @@
                     <li><a href="#">المقالات</a></li>
                     <li><a href="#">الفتاوى</a></li>
                     <li><a href="#">المكتبة</a></li>
+                    <li><a href="#">الدروس</a></li>
                     <li><a href="#">التواصل</a></li>
                 </ul>
             </nav>
@@ -23,6 +24,7 @@
     </header>
 
     <main>
+        <!-- Welcome Section -->
         <section class="welcome">
             <div class="container">
                 <h2>مرحبًا بكم في موقعنا الإسلامي</h2>
@@ -30,6 +32,7 @@
             </div>
         </section>
 
+        <!-- Articles Section -->
         <section class="articles">
             <div class="container">
                 <h2>أحدث المقالات</h2>
@@ -50,6 +53,77 @@
             </div>
         </section>
 
+        <!-- Fatwas Section with Search -->
+        <section class="fatwas">
+            <div class="container">
+                <h2>الفتاوى</h2>
+                <input type="text" id="fatwa-search" placeholder="ابحث عن فتوى" onkeyup="searchFatwas()">
+                <div class="fatwa-list" id="fatwa-list">
+                    <article class="fatwa-item">
+                        <h3>فتوى 1: حكم الصلاة في المسجد</h3>
+                        <p>تعرف على حكم الصلاة في المسجد بالنسبة للمسافر...</p>
+                    </article>
+                    <article class="fatwa-item">
+                        <h3>فتوى 2: حكم الزكاة على المال المدخر</h3>
+                        <p>ما هو حكم الزكاة على المال المدخر وما شروط إخراجها؟...</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lessons Section -->
+        <section class="lessons">
+            <div class="container">
+                <h2>الدروس الصوتية والمرئية</h2>
+                <div class="lesson-list">
+                    <div class="lesson-item">
+                        <video controls>
+                            <source src="video.mp4" type="video/mp4">
+                        </video>
+                        <h3>درس 1: فهم أصول الفقه</h3>
+                    </div>
+                    <div class="lesson-item">
+                        <audio controls>
+                            <source src="audio.mp3" type="audio/mp3">
+                        </audio>
+                        <h3>درس 2: شرح الأحاديث النبوية</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section class="social-media">
+            <div class="container">
+                <h2>تابعنا على</h2>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="فيسبوك"></a>
+                    <a href="https://twitter.com" target="_blank"><img src="twitter-icon.png" alt="تويتر"></a>
+                    <a href="https://youtube.com" target="_blank"><img src="youtube-icon.png" alt="يوتيوب"></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comments Section -->
+        <section class="comments">
+            <div class="container">
+                <h2>التعليقات</h2>
+                <form action="#" method="post">
+                    <textarea name="comment" rows="4" placeholder="اكتب تعليقك هنا..." required></textarea>
+                    <button type="submit">إرسال</button>
+                </form>
+                <div class="comments-list">
+                    <div class="comment-item">
+                        <p><strong>أحمد:</strong> مقال رائع، جزاكم الله خيرًا.</p>
+                    </div>
+                    <div class="comment-item">
+                        <p><strong>سارة:</strong> موضوع مهم جدًا، شكراً على هذه المقالات.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subscription Section -->
         <section class="footer-info">
             <div class="container">
                 <h2>انضم إلينا</h2>
@@ -68,5 +142,6 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
