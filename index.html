@@ -3,61 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>موقع كلاسيكي</title>
+    <title>موقع إسلامي فخم</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- الشريط العلوي (Header) -->
     <header>
-        <div class="logo">
-            <h1>موقعك الكلاسيكي</h1>
+        <div class="container">
+            <h1>موقع إسلامي</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">الصفحة الرئيسية</a></li>
+                    <li><a href="#">المقالات</a></li>
+                    <li><a href="#">الفتاوى</a></li>
+                    <li><a href="#">المكتبة</a></li>
+                    <li><a href="#">التواصل</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#articles">المقالات</a></li>
-                <li><a href="#gallery">المعرض</a></li>
-                <li><a href="#contact">اتصل بنا</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- القسم الرئيسي (Main Section) -->
     <main>
-        <section id="home" class="intro">
-            <h2>مرحبا بك في موقعنا!</h2>
-            <p>استكشف مقالاتنا وصورنا الجميلة.</p>
-        </section>
-
-        <section id="articles" class="articles">
-            <h2>المقالات</h2>
-            <div class="article">
-                <h3>عنوان المقال الأول</h3>
-                <p>محتوى المقال الأول...</p>
-            </div>
-            <div class="article">
-                <h3>عنوان المقال الثاني</h3>
-                <p>محتوى المقال الثاني...</p>
+        <section class="welcome">
+            <div class="container">
+                <h2>مرحبًا بكم في موقعنا الإسلامي</h2>
+                <p>نحن نقدم محتوى إسلامي ديني شامل وموثوق لتعزيز الوعي الديني والتثقيف العام.</p>
             </div>
         </section>
 
-        <section id="gallery" class="gallery">
-            <h2>معرض الصور</h2>
-            <div class="image">
-                <img src="image1.jpg" alt="صورة 1">
+        <section class="articles">
+            <div class="container">
+                <h2>أحدث المقالات</h2>
+                <div class="article-list">
+                    <article class="article-item">
+                        <h3>مقال 1: أهمية الصلاة في الإسلام</h3>
+                        <p>الصلاة ركن من أركان الإسلام، وهي من أعظم العبادات التي تقرب العبد إلى ربه.</p>
+                    </article>
+                    <article class="article-item">
+                        <h3>مقال 2: كيف نحافظ على ديننا في العصر الحديث</h3>
+                        <p>في هذا المقال، سنتناول طرق المحافظة على القيم الإسلامية في الحياة اليومية.</p>
+                    </article>
+                    <article class="article-item">
+                        <h3>مقال 3: فتاوى حول الصوم في رمضان</h3>
+                        <p>سنستعرض أهم الفتاوى المتعلقة بالصوم وكيفية أداء العبادة بشكل صحيح.</p>
+                    </article>
+                </div>
             </div>
-            <div class="image">
-                <img src="image2.jpg" alt="صورة 2">
+        </section>
+
+        <section class="footer-info">
+            <div class="container">
+                <h2>انضم إلينا</h2>
+                <p>اشترك في نشرتنا الإخبارية للحصول على أحدث المقالات والفتاوى.</p>
+                <form action="#" method="post" class="subscription-form">
+                    <input type="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
+                    <button type="submit">اشترك</button>
+                </form>
             </div>
         </section>
     </main>
 
-    <!-- القسم السفلي (Footer) -->
     <footer>
-        <p>© 2025 جميع الحقوق محفوظة.</p>
+        <div class="container">
+            <p>&copy; 2025 موقع إسلامي. جميع الحقوق محفوظة.</p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
