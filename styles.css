@@ -1,62 +1,68 @@
-/* استيراد الخطوط */
-@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
-
-* {
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    direction: rtl;
+    transition: all 0.3s ease;
 }
 
-body {
-    font-family: 'Amiri', serif;
-    background-color: #fafafa;
-    color: #333;
-    transition: all 0.3s ease;
-    line-height: 1.6;
+:root {
+    --primary-color: #004b87;
+    --secondary-color: #f9f9f9;
+    --text-color: #333;
+    --bg-color: #ffffff;
+}
+
+.dark-mode {
+    --primary-color: #222;
+    --secondary-color: #333;
+    --text-color: #fff;
+    --bg-color: #121212;
 }
 
 header {
-    background-color: #00796b;
-    color: #fff;
-    padding: 20px;
+    background: var(--primary-color);
+    color: white;
+    padding: 15px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
-.navbar ul {
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#theme-toggle {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+nav ul {
     list-style: none;
+    padding: 0;
     display: flex;
     justify-content: center;
-    gap: 25px;
-    padding: 10px 0;
 }
 
-.navbar ul li {
-    position: relative;
+nav ul li {
+    margin: 0 15px;
 }
 
-.navbar ul li a, .navbar ul li button {
+nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px;
-    text-transform: uppercase;
-}
-
-.navbar ul li a:hover, .navbar ul li button:hover {
-    color: #80cbc4;
     transition: color 0.3s ease;
 }
 
-.navbar ul li button {
-    background-color: transparent;
-    color: #fff;
-    border: 1px solid #fff;
-    font-size: 20px;
-    cursor: pointer;
+nav ul li a:hover {
+    color: #ffd700;
 }
 
 .search-bar {
@@ -65,107 +71,43 @@ header {
 }
 
 .search-bar input {
-    padding: 12px;
-    width: 80%;
-    max-width: 500px;
+    padding: 10px;
+    width: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
 }
 
 .search-bar button {
-    padding: 12px;
-    background-color: #00796b;
-    color: #fff;
+    padding: 10px;
+    background: var(--primary-color);
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 section {
-    padding: 40px;
-    margin: 20px auto;
-    background-color: #fff;
-    width: 90%;
-    max-width: 1200px;
+    padding: 20px;
+    background: var(--secondary-color);
+    margin: 10px auto;
+    width: 80%;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    animation: fadeIn 1s forwards;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-section.fade-in {
-    animation: fadeIn 1s forwards;
+section:hover {
+    transform: scale(1.02);
 }
 
 footer {
-    background-color: #00796b;
-    color: #fff;
     text-align: center;
     padding: 15px;
-    font-size: 14px;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #00796b;
+    background: var(--primary-color);
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
+}
+
+.ayah {
     font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #004d40;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-/* التوافق مع الشاشات الصغيرة */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-
-    .search-bar input {
-        width: 90%;
-    }
-
-    section {
-        width: 90%;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .cta-button {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-}
-
-/* الوضع الداكن */
-.dark-mode {
-    background-color: #333;
-    color: #fafafa;
-}
-
-.dark-mode header {
-    background-color: #004d40;
-}
-
-.dark-mode .search-bar button {
-    background-color: #004d40;
-}
-
-.dark-mode footer {
-    background-color: #004d40;
+    color: #009688;
 }
