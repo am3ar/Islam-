@@ -1,6 +1,6 @@
 /* تحسين عام */
 body {
-    font-family: 'Amiri', serif; /* خط عربي أنيق */
+    font-family: 'Amiri', serif;
     direction: rtl;
     text-align: right;
     background-color: #f8f9fa;
@@ -58,7 +58,7 @@ footer {
 }
 
 /* تحسين العناصر */
-.verse, .hadith {
+.verse, .hadith, .feature {
     background-color: #fff;
     padding: 20px;
     margin: 20px 0;
@@ -67,20 +67,32 @@ footer {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.verse:hover, .hadith:hover {
+.verse:hover, .hadith:hover, .feature:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.verse p, .hadith p {
+.verse p, .hadith p, .feature p {
     margin: 0;
     font-size: 18px;
     color: #555;
 }
 
-.verse strong, .hadith strong {
+.verse strong, .hadith strong, .feature h3 {
     color: #2c3e50;
     font-weight: bold;
+}
+
+.feature i {
+    font-size: 2rem;
+    color: #1abc9c;
+    margin-bottom: 10px;
+}
+
+.intro-image {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
 /* تأثيرات إضافية */
@@ -95,9 +107,4 @@ footer {
 
 main {
     animation: fadeIn 1s ease-in-out;
-}
-
-.verse.active {
-    background-color: #e9f5f9;
-    border-left: 5px solid #1abc9c;
 }
