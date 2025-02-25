@@ -15,6 +15,9 @@ body {
 
 /* Header Styling */
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background-color: #004d40;
     color: white;
     padding: 20px 0;
@@ -92,7 +95,14 @@ header nav ul li a:hover {
     box-sizing: border-box;
     margin-bottom: 20px;
     border-radius: 8px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.article-item.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .article-item:hover {
@@ -104,70 +114,52 @@ header nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-/* Subscription Section */
-.footer-info {
+/* Fatwas Section */
+.fatwas input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #004d40;
+    border-radius: 5px;
+}
+
+.fatwa-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.fatwa-item {
+    background-color: #e0f7fa;
+    padding: 15px;
+    border: 1px solid #004d40;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Social Media Section */
+.social-media {
     background-color: #004d40;
     color: white;
     padding: 40px 0;
     text-align: center;
 }
 
-.footer-info .subscription-form {
-    margin-top: 20px;
+.social-media .social-icons a {
+    margin: 0 15px;
+    display: inline-block;
 }
 
-.footer-info .subscription-form input {
-    padding: 10px;
-    font-size: 16px;
-    width: 300px;
-    margin-right: 10px;
-    border: none;
-    border-radius: 5px;
+.social-media img {
+    width: 40px;
+    height: 40px;
 }
 
-.footer-info .subscription-form button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #00897b;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+/* Comments Section */
+.comments {
+    background-color: #ffffff;
+    padding: 40px 0;
 }
 
-.footer-info .subscription-form button:hover {
-    background-color: #004d40;
-}
-
-/* Footer Styling */
-footer {
-    background-color: #004d40;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer p {
-    font-size: 16px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        margin-top: 20px;
-    }
-
-    .article-list {
-        flex-direction: column;
-    }
-
-    .article-item {
-        width: 100%;
-    }
-}
+.comments form {
+    margin-bottom: 30
